@@ -2,40 +2,35 @@ name: Build and Deploy PDFs
 
 on:
   push:
-    branches: [ main ]  # Change this if you use a different branch
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Run the job inside a container with LaTeX installed.
-    container:
-      image: blang/latex:latest
-
     steps:
-      # Step 1: Check out the repository so we have access to the source files.
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Find and compile all .tex files.
+      - name: Install TeX Live and latexmk
+        run: |
+          sudo apt-get update
+          # You may not need the full texlive-full if your documents are modest.
+          sudo apt-get install -y texlive-full latexmk
+
       - name: Compile all LaTeX documents
         run: |
-          # Find all .tex files (ignoring any in the "public" folder) and compile them.
           find . -type f -name "*.tex" -not -path "./public/*" -print0 | while IFS= read -r -d '' texfile; do
             echo "Compiling ${texfile}..."
             latexmk -pdf -silent "${texfile}"
           done
 
-      # Step 3: Prepare the deployment directory.
       - name: Prepare deployment directory
         run: |
           mkdir -p public
-          # Remove any previously published PDFs (optional)
           rm -f public/*.pdf
-          # Find all generated PDFs (ignoring those in "public") and copy them to the deployment folder.
           find . -type f -name "*.pdf" -not -path "./public/*" -exec cp {} public/ \;
 
-      # Step 4: Deploy the PDFs to GitHub Pages.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
