@@ -1,0 +1,147 @@
+\documentclass{article}
+\usepackage[hscale=0.7,vscale=0.8]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}  % Palatino font
+
+\usepackage{microtype} % Improves spacing & kerning
+\usepackage{hyperref}
+
+% Define custom colors
+\definecolor{codebg}{RGB}{240,240,240}  % Light gray background
+\definecolor{codeborder}{RGB}{100,100,100}  % Darker gray border
+\definecolor{keywordcolor}{RGB}{0,0,150}  % Dark blue for keywords
+\definecolor{commentcolor}{RGB}{0,128,0}  % Green for comments
+\definecolor{stringcolor}{RGB}{150,0,0}  % Dark red for strings
+\hypersetup{
+    colorlinks=true,        % Enable colored links
+    urlcolor=magenta,          % Change link color
+    linkcolor=red,          % Color for internal links
+    citecolor=green         % Color for citations
+}
+
+% Define custom lstlisting style
+\lstdefinestyle{customcode}{
+    backgroundcolor=\color{codebg},
+    frame=single, 
+    rulecolor=\color{codeborder},
+    keywordstyle=\color{keywordcolor}\bfseries,
+    commentstyle=\color{commentcolor},
+    stringstyle=\color{stringcolor},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    framextopmargin=5pt,
+    framexbottommargin=5pt,
+    xleftmargin=10pt,
+    xrightmargin=10pt,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+}
+\title{Homework 2: Introduction to Django}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Objective}
+You are tasked with building a RESTful Movie Theater Booking Application using Python and Django. The application should allow users to:
+
+\begin{itemize}
+    \item View movie listings
+    \item Book seats
+    \item Check their booking history through a RESTful API
+\end{itemize}
+
+Additionally, you will create an attractive user interface using Django templates and Bootstrap.
+
+\section{Time Requirement}
+Approximately 4-5 hours.
+
+\section{Instructions}
+\subsection{Project Setup (30 minutes)}
+\begin{enumerate}
+    \item Create a new Django project named \texttt{movie\_theater\_booking}.
+    \item Set up a virtual environment and install dependencies:
+    \begin{lstlisting}[style=customcode,language=bash]
+    python3 -m venv myenv
+    source myenv/bin/activate
+    pip install django djangorestframework
+    \end{lstlisting}
+\end{enumerate}
+
+\subsection{Creating the Booking App (30 minutes)}
+Inside your project, create a Django app named \texttt{bookings} with the following models:
+
+\begin{itemize}
+    \item \textbf{Movie}: title, description, release date, duration.
+    \item \textbf{Seat}: seat number, booking status.
+    \item \textbf{Booking}: movie, seat, user, booking date.
+\end{itemize}
+
+\subsection{Implementing the MVT Architecture (1 hour)}
+\begin{itemize}
+    \item Create and run migrations.
+    \item Develop RESTful views using Django REST Framework.
+    \item Set up templates for movie listings, seat booking, and booking history.
+\end{itemize}
+
+\subsection{Creating an Attractive User Interface (1 hour)}
+Use Bootstrap to create responsive templates:
+\begin{lstlisting}[style=customcode,language=html]
+{% extends 'bookings/base.html' %}
+{% block title %}Movie List{% endblock %}
+{% block content %}
+<h2>Available Movies</h2>
+<ul class="list-group">
+    {% for movie in movies %}
+        <li class="list-group-item">
+            <h5>{{ movie.title }}</h5>
+            <p>{{ movie.description }}</p>
+            <a href="{% url 'book_seat' movie.id %}" class="btn btn-primary">Book Now</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+\end{lstlisting}
+
+\subsection{RESTful API Implementation (1 hour)}
+Create serializers and define API endpoints:
+\begin{itemize}
+    \item \texttt{/api/movies/} : List and manage movies.
+    \item \texttt{/api/seats/} : Check and book seats.
+    \item \texttt{/api/bookings/} : View and create bookings.
+\end{itemize}
+
+\subsection{Testing (30 minutes)}
+Write unit tests for models and test API responses.
+
+\subsection{Deployment (30 minutes)}
+Deploy using Django's development server:
+\begin{lstlisting}[style=customcode,language=bash]
+python manage.py runserver 0.0.0.0:3000
+\end{lstlisting}
+
+\section{Submission Requirements}
+Submit a zip file containing:
+\begin{itemize}
+    \item Project source code with tests.
+    \item README file with setup instructions.
+    \item GitHub repository with frequent commits.
+\end{itemize}
+
+\section{Assessment Criteria}
+\begin{itemize}
+    \item \textbf{Functionality (35 points)}: Meets all requirements.
+    \item \textbf{User Experience (15 points)}: Clean UI with Bootstrap.
+    \item \textbf{Code Quality (15 points)}: Follows Django conventions.
+    \item \textbf{Testing (20 points)}: Unit and integration tests included.
+    \item \textbf{Deployment (10 points)}: Accessible via DevEdu.
+    \item \textbf{Documentation (5 points)}: Clear README included.
+\end{itemize}
+
+\end{document}
