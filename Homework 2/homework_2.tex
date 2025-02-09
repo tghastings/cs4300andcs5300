@@ -6,6 +6,7 @@
 \usepackage{enumitem,amssymb}
 \usepackage[T1]{fontenc}
 \usepackage{mathpazo}  % Palatino font
+\usepackage{array}  % For improved table column definitions
 
 \usepackage{microtype} % Improves spacing & kerning
 \usepackage{hyperref}
@@ -65,7 +66,7 @@ Approximately 4-5 hours.
 \section{Instructions}
 \subsection{Project Setup (30 minutes)}
 \begin{enumerate}
-    \item Create a new Django project named \texttt{movie\_theater\_booking}.
+    \item Create a new Django project named \texttt{movie\_theater\_booking} inside of the \textit{homework2} directory. \href{https://docs.djangoproject.com/en/stable/intro/tutorial01/}{Django Getting Started - Docs}
     \item Set up a virtual environment and install dependencies:
     \begin{lstlisting}[style=customcode,language=bash]
     python3 -m venv myenv
@@ -75,7 +76,7 @@ Approximately 4-5 hours.
 \end{enumerate}
 
 \subsection{Creating the Booking App (30 minutes)}
-Inside your project, create a Django app named \texttt{bookings} with the following models:
+Within your project folder, create a Django app named \texttt{bookings} with the following models:
 
 \begin{itemize}
     \item \textbf{Movie}: title, description, release date, duration.
@@ -84,14 +85,50 @@ Inside your project, create a Django app named \texttt{bookings} with the follow
 \end{itemize}
 
 \subsection{Implementing the MVT Architecture (1 hour)}
+\textbf{Model:}
 \begin{itemize}
-    \item Create and run migrations.
-    \item Develop RESTful views using Django REST Framework.
-    \item Set up templates for movie listings, seat booking, and booking history.
+    \item Create and run migrations to set up the database tables for your models.
+\end{itemize}
+\textbf{View:}
+\begin{itemize}
+    \item Develop the following views using Django REST Framework's viewsets:
+\end{itemize}
+\begin{itemize}
+        \item MovieViewSet: For CRUD operations on movies.
+    \begin{itemize}
+        \item SeatViewSet: For seat availability and booking.
+    \end{itemize}
+    \begin{itemize}
+        \item BookingViewSet: For users to book seats and view their booking history.
+    \end{itemize}
+\end{itemize}
+\textbf{Templates:}
+\begin{itemize}
+    \item Create HTML templates for user interactions (movie listings, seat booking, and booking history) using Django’s templating system.
 \end{itemize}
 
+
 \subsection{Creating an Attractive User Interface (1 hour)}
-Use Bootstrap to create responsive templates:
+Create a templates directory in your \texttt{bookings} app to store HTML files:
+
+\begin{verbatim}
+bookings/
+├── templates/
+│   └── bookings/
+│       ├── base.html
+│       ├── movie_list.html
+│       ├── seat_booking.html
+│       └── booking_history.html
+\end{verbatim}
+
+\begin{itemize}
+    \item Base Template (base.html): Use Bootstrap for responsive design. Include the Bootstrap CSS link in your base template.
+
+    \item Create Individual Templates: Design the movie listing, seat booking, and booking history pages, ensuring they are visually appealing and user-friendly.
+
+\end{itemize}
+
+Example of a movie listing template (\texttt{movie\_list.html}):
 \begin{lstlisting}[style=customcode,language=html]
 {% extends 'bookings/base.html' %}
 {% block title %}Movie List{% endblock %}
@@ -110,29 +147,85 @@ Use Bootstrap to create responsive templates:
 \end{lstlisting}
 
 \subsection{RESTful API Implementation (1 hour)}
-Create serializers and define API endpoints:
+You will create an API using serializers and URLs. 
+
 \begin{itemize}
-    \item \texttt{/api/movies/} : List and manage movies.
-    \item \texttt{/api/seats/} : Check and book seats.
-    \item \texttt{/api/bookings/} : View and create bookings.
+    \item Serializers:
+\end{itemize}
+\begin{itemize}
+    \begin{itemize}
+        \item Create serializers for the Movie, Seat, and Booking models to convert them to JSON format.
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item URLs:
+\end{itemize}
+\begin{itemize}
+    \begin{itemize}
+        \item Set up URL routing for the API endpoints in urls.py.
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \begin{itemize}
+        \begin{itemize}
+            \item Endpoints should include:
+            \begin{itemize}
+                \item /api/movies/: List all movies and allow CRUD operations.
+            \end{itemize}
+            \begin{itemize}
+                \item /api/seats/: Check seat availability and book seats.
+            \end{itemize}
+            \begin{itemize}
+                \item /api/bookings/: View booking history and create new bookings.
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
 \end{itemize}
 
+
+
 \subsection{Testing (30 minutes)}
-Write unit tests for models and test API responses.
+\begin{itemize}
+    \item Write Unit Tests: 
+    \begin{itemize}
+        \item Create unit tests for your models in tests.py.
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Integration Testing: 
+    \begin{itemize}
+        \item Test the API endpoints to ensure they return the correct responses (status codes, data format).
+    \end{itemize}
+\end{itemize}
+
 
 \subsection{Deployment (30 minutes)}
-Deploy using Django's development server:
+\begin{itemize}
+    \item Deploy using Django's development server:
+\end{itemize}
 \begin{lstlisting}[style=customcode,language=bash]
 python manage.py runserver 0.0.0.0:3000
 \end{lstlisting}
 
-\section{Submission Requirements}
-Submit a zip file containing:
 \begin{itemize}
-    \item Project source code with tests.
-    \item README file with setup instructions.
-    \item GitHub repository with frequent commits.
+    \item In DevEdu, click on App to view your current application
+    \item Make sure your application runs on DevEdu when you hit the App button
 \end{itemize}
+
+
+\section{Submission Requirements}
+\begin{enumerate}
+    \item Submit a zip file using Canvas containing:
+    \begin{itemize}
+        \item Project source code with tests.
+        \item README file with setup instructions.
+        \item GitHub repository with frequent commits.
+\end{itemize}
+    \item Push all files to your GitHub repository
+    \item Have all code in DevEdu for testing and running purposes
+\end{enumerate}
+
+
 
 \section{Assessment Criteria}
 \begin{itemize}
@@ -143,5 +236,57 @@ Submit a zip file containing:
     \item \textbf{Deployment (10 points)}: Accessible via DevEdu.
     \item \textbf{Documentation (5 points)}: Clear README included.
 \end{itemize}
+
+\subsection{Rubric (Total: 100 Points)}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{l l p{8cm}}
+\hline
+\textbf{Criteria} & \textbf{Points} & \textbf{Description} \\
+\hline
+Functionality &
+35 &
+- Application meets all requirements (view movie listings, book seats, check booking history).\\
+& &
+- RESTful API is fully functional and responds as expected. \newline \\
+User Experience &
+15 &
+- User interface is visually appealing and user-friendly.\\
+& &
+- Effective use of Bootstrap or similar frameworks for design.\\
+& &
+- Application is easy to navigate. \newline \\
+Code Quality &
+15 &
+- Code is well-organized and follows Django conventions. \\
+& &
+- Proper use of comments and documentation. \\
+& &
+- Efficient use of models, views, and serializers. \newline \\
+Testing &
+20 &
+- Comprehensive unit and integration tests are written.\\
+& &
+- Tests cover edge cases and provide adequate coverage for all major functionality.\\
+& &
+- Tests are properly organized and easy to understand. \\
+& & 
+- Tests pass. \newline \\
+Deployment &
+10 &
+- Application is successfully accessible via App in DevEdu. \newline \\ 
+Documentation \& README &
+5 &
+- README file is complete, explaining project structure, setup, and how to run the application.\\
+& &
+- Documentation is clear and helpful for understanding the application.\\
+\hline
+\end{tabular}
+\caption{Homework 2 Grading Rubric}
+\end{table}
+
+\end{document}
 
 \end{document}
