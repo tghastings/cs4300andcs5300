@@ -1,5 +1,5 @@
 # Examples of Thesis and RQ Questions 
-## Example 1:
+## Example 1: Contemporary Directions in Software Engineering: Methodologies, Human Factors, and AI Integration
 **Thesis Statement**
 
 This literature review investigates the intersection of modern methodologies, human factors, and emerging technologies within software engineering, with a focus on practical insights that can be critically analyzed within a single academic term. The goal is to equip graduate students with a structured understanding of how contemporary practices are applied, challenged, and adapted in real-world projects, while identifying research gaps that can be explored through course assignments and projects.
