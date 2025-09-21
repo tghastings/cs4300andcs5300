@@ -42,7 +42,7 @@ AI tools can meaningfully improve developer productivity in a single course proj
 
 
 
-### Souurce
+### Source
 @misc{chatgpt_ai_se_course_2025,
   author       = {OpenAI ChatGPT},
   title        = {Conversation with ChatGPT on scoping a one-semester course project on AI in Software Engineering},
