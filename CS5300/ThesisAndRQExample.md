@@ -51,6 +51,7 @@ AI tools can meaningfully improve developer productivity in a single course proj
   day          = {21},
   howpublished = {\url{https://chat.openai.com/}},
   note         = {Accessed: 2025-09-21}
+}
 ```
 ```bibtex
 @unpublished{hastings2025litreview,
@@ -63,4 +64,3 @@ AI tools can meaningfully improve developer productivity in a single course proj
 }
 ```
   
-}
