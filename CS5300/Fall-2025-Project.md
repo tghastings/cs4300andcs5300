@@ -13,6 +13,11 @@ You will implement the user stories and acceptance criteria below. Some of the f
 
 **Note: DevEdu might not be the best environment for this activity so please plan accordingly.**
 
+### Examples Software Projects w/ Agents
+1. [Medium Scraper](https://github.com/bdfinst/medium-download)
+1. [Cooking with Claude Code: The Complete Guide](https://www.siddharthbharath.com/claude-code-the-complete-guide/)
+1. [Claude Code: Best practices for agentic coding](https://www.anthropic.com/engineering/claude-code-best-practices) 
+
 
 ## AIS Extension User Stories & Acceptance Criteria
 
