@@ -10,7 +10,8 @@ Below are a couple of helpful resources to get you started:
 You will implement the user stories and acceptance criteria below. Some of the features might already be implemented. In addition you will follow these requirements:
 1. You are REQUIRED to use Claude and Claude Code with an [agents.md](https://agents.md) file for all code implementations. 
 1. You will store your code in https://github.com/UCCS-CS4300-5300/Fall-25-CS-5300 
-Note: DevEdu might not be the best environment for this activity so please plan accordingly. 
+
+**Note: DevEdu might not be the best environment for this activity so please plan accordingly.**
 
 
 ## AIS Extension User Stories & Acceptance Criteria
