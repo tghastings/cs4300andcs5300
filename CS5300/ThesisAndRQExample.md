@@ -1,6 +1,24 @@
-# Course Project: Evaluating AI Tools in Software Engineering
+# Examples of Thesis and RQ Questions 
+## Example 1:
+**Thesis Statement**
 
-## 🎯 Thesis & Research Questions (Scoped to Semester)
+This literature review investigates the intersection of modern methodologies, human factors, and emerging technologies within software engineering, with a focus on practical insights that can be critically analyzed within a single academic term. The goal is to equip graduate students with a structured understanding of how contemporary practices are applied, challenged, and adapted in real-world projects, while identifying research gaps that can be explored through course assignments and projects.
+
+**Research Questions**
+
+RQ1: How do Agile and DevOps practices affect team productivity and software quality in short-term software projects?
+Scoping: Students can review empirical studies, case reports, and meta-analyses that evaluate measurable outcomes like velocity, defect rates, and delivery frequency.
+
+RQ2: What human and organizational factors most significantly influence collaboration and communication in distributed or hybrid software engineering teams?
+Scoping: Students can synthesize findings on tools (Slack, GitHub, Jira), team structures, and cross-cultural challenges that are relevant to semester-length project teams.
+
+RQ3: How is artificial intelligence being integrated into developer tools (e.g., code completion, automated testing, bug prediction), and what short-term benefits and challenges have been identified?
+Scoping: Students can analyze recent studies and industry reports to evaluate practical implications for productivity and ethical concerns without needing long-term trend analysis.
+
+---
+## Example 2: Course Project: Evaluating AI Tools in Software Engineering
+
+### 🎯 Thesis & Research Questions (Scoped to Semester)
 
 **Thesis Statement (scoped):**  
 AI tools can meaningfully improve developer productivity in a single course project setting by reducing time on repetitive tasks, improving perceived code quality, and supporting defect detection.  
@@ -12,7 +30,7 @@ AI tools can meaningfully improve developer productivity in a single course proj
 
 ---
 
-## 🛠️ Evaluation Plan
+### 🛠️ Evaluation Plan
 
 | Research Question | Evaluation Method (feasible for 16 weeks) | Metrics | Data Sources |
 |-------------------|--------------------------------------------|---------|--------------|
@@ -22,27 +40,9 @@ AI tools can meaningfully improve developer productivity in a single course proj
 
 ---
 
-## 📅 Semester Timeline
 
-- **Weeks 1–2:** Introduction, background on AI in SE, thesis + research question framing.  
-- **Weeks 3–6:** Run Lab 1 & 2 (routine coding tasks). Collect time + usage data.  
-- **Weeks 7–10:** Run Lab 3 (peer review + surveys on AI vs non-AI code).  
-- **Weeks 11–13:** Bug detection lab (seeded bug exercise).  
-- **Weeks 14–15:** Data analysis (basic stats, visualizations).  
-- **Week 16:** Final report & presentations (tie back to thesis).  
-
----
-
-## ✅ Why This Fits a Semester
-
-- **Labs are small and focused** → can be done in 1–2 weeks each.  
-- **Data collection is lightweight** → reuses existing course assignments.  
-- **Analysis is accessible** → students can run basic stats/graphs without needing advanced methods.  
-- **Research experience** → ties back to thesis + structured questions, but still practical.  
-
-
-
-### Source
+#### Source
+```bibtex
 @misc{chatgpt_ai_se_course_2025,
   author       = {OpenAI ChatGPT},
   title        = {Conversation with ChatGPT on scoping a one-semester course project on AI in Software Engineering},
@@ -51,4 +51,16 @@ AI tools can meaningfully improve developer productivity in a single course proj
   day          = {21},
   howpublished = {\url{https://chat.openai.com/}},
   note         = {Accessed: 2025-09-21}
+```
+```bibtex
+@unpublished{hastings2025litreview,
+  author       = {Hastings, Thomas},
+  title        = {Literature Review Thesis Statement and Research Questions for a Graduate Software Engineering Course},
+  year         = {2025},
+  note         = {Unpublished manuscript. Draft prepared with assistance from GPT-5 (OpenAI).},
+  howpublished = {\url{https://chat.openai.com}},
+  month        = sep
+}
+```
+  
 }
