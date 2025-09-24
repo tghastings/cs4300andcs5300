@@ -180,8 +180,17 @@ You will create an API using serializers and URLs.
             \end{itemize}
 \end{itemize}
 
-\subsection{Testing (30 minutes)}
+\subsection{Testing \& Running Locally (30 minutes)}
 \begin{itemize}
+    \item You will want to run the application locally inside of the DevEdu environment.
+    \begin{itemize}
+        \item Start the server. Then naviage to the "app" button inside of DevEdu dashboard (next to editor). The link will be similar to \textit{https://app-containerName-SectionID.devedu.io/}
+        \begin{lstlisting}[style=customcode,language=bash]
+python3 manage.py runserver 0.0.0.0:3000
+{% endblock %}
+\end{lstlisting}
+    \end{itemize}
+
     \item Write Unit Tests: 
     \begin{itemize}
         \item Create unit tests for your models in tests.py.
@@ -272,6 +281,7 @@ Testing &
 - Tests are properly organized and easy to understand. \\
 & & 
 - Tests pass. \newline \\
+
 Deployment &
 10 &
 - Application is successfully accessible via App in DevEdu. \newline \\ 
