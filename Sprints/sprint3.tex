@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+
+% Colors
+\definecolor{newitem}{RGB}{0,100,0}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{CS 4300/5300 Software Engineering}
+\lhead{Sprint 3}
+\rfoot{Page \thepage}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\textbf{CS 4300/5300 Software Engineering}}\\[0.5em]
+{\Large Sprint 3 Requirements}\\[1em]
+\end{center}
+
+\section{Sprint 3 Objectives}
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+\textbf{Requirement} & \textbf{Points} \\
+\midrule
+Individually - Delivered Peer Feedback & 12 pts \\
+Project in GitHub & 0 pts \\
+Features with tests & 30 pts \\
+80\% Test coverage metrics & 13 pts \\
+\midrule
+\multicolumn{2}{l}{\textbf{CI Pipeline:}} \\
+\quad AI Code Review using OpenAI Platform (each Pull Request) & 2.5 pts \\
+\quad Running automated tests (each commit) & 2.5 pts \\
+\quad Reports test coverage metrics in console (each commit) & 2.5 pts \\
+\quad \textcolor{newitem}{\textbf{NEW:}} PyLint and/or Flake8: Linting scans w/ reports & 15 pts \\
+\quad \textcolor{newitem}{\textbf{NEW:}} Dependabot: Dependency Vulnerability Scans w/ reports & 15 pts \\
+\midrule
+\multicolumn{2}{l}{\textbf{Deployed to a production environment:}} \\
+\quad \textcolor{newitem}{\textbf{NEW:}} Custom domain name (no subdomains unless you own TLD) & 5 pts \\
+\midrule
+CD Pipeline that runs when code is merged into main & 2.5 pts \\
+\midrule
+\textbf{Total} & \textbf{100 pts} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Detailed Requirements}
+
+\subsection{Individually - Delivered Peer Feedback (12 pts)}
+Each team member must deliver constructive peer feedback to teammates.
+
+\subsection{Project in GitHub (0 pts)}
+Your project must continue to be maintained in GitHub (no points assigned this sprint as this is now expected).
+
+\subsection{Features with Tests (30 pts)}
+All features developed during this sprint must have comprehensive tests. This requirement carries increased weight to emphasize the importance of well-tested features.
+
+\subsection{80\% Test Coverage Metrics (13 pts)}
+Your test suite must maintain at least 80\% code coverage.
+
+\subsection{CI Pipeline (37.5 pts total)}
+Your continuous integration pipeline must include:
+\begin{itemize}
+    \item \textbf{AI Code Review (2.5 pts):} Using OpenAI Platform for each Pull Request
+    \item \textbf{Automated Tests (2.5 pts):} Running automated tests for each commit
+    \item \textbf{Coverage Reports (2.5 pts):} Reports test coverage metrics in console for each commit
+    \item \textbf{\textcolor{newitem}{NEW:} Linting (15 pts):} PyLint and/or Flake8 linting scans in CI pipeline with reports
+    \item \textbf{\textcolor{newitem}{NEW:} Dependency Scans (15 pts):} Dependabot dependency vulnerability scans in CI pipeline with reports
+\end{itemize}
+
+\subsection{\textcolor{newitem}{NEW:} Custom Domain (5 pts)}
+Your application must be deployed to a production environment with a custom domain name. No subdomains are allowed unless you own the top-level domain.
+
+\subsection{CD Pipeline (2.5 pts)}
+Code must continually be deployed to production environment using GitHub Actions when merged into main.
+
+\vspace{2em}
+\noindent\textit{See the Common Sprint Requirements document for planning, development, demo, and submission requirements.}
+
+\end{document}

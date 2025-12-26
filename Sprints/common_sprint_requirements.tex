@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{CS 4300/5300 Software Engineering}
+\lhead{Common Sprint Requirements}
+\rfoot{Page \thepage}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\textbf{CS 4300/5300 Software Engineering}}\\[0.5em]
+{\Large Common Sprint Requirements}\\[1em]
+\end{center}
+
+Each sprint is two weeks long. Make sure that you work through both weeks of the sprint to achieve your tasks.
+
+\section{Sprint Planning}
+
+\begin{enumerate}
+    \item At the beginning of the sprint, meet with your group to do \textbf{backlog grooming} and \textbf{prioritization}. Mark stories that are MVPs (minimum viable product).
+    
+    \item Begin the Sprint by looking over your backlog. Add stories or divide stories as needed---some of this may include playing \href{https://www.atlassian.com/blog/platform/scrum-poker-for-agile-projects}{Planning Poker} in your team to determine points and need for division. Record the changes in GitHub.
+    
+    \item Meet with your customer to identify the stories they want you to implement. Prioritize and confirm with them (if you can).
+    
+    \item The number of stories that you will complete each sprint depends on the difficulty of the stories. Select as many stories as you hope to get done---if you don't meet your expectations, that's okay, but each person should have a story/stories to work on. You will balance the workload between each of the sprints. At least two larger stories should be implemented and fully tested each sprint. Pairs of students may work on features that are especially large.
+    
+    \item Move the selected tasks from Backlog to the current Sprint.
+    
+    \item Each group member should take ownership of \textbf{at least one task}.
+\end{enumerate}
+
+\textbf{Note:} Keep the FIRST and SMART principles in mind---it is fine to divide stories and tasks so that they are achievable and measurable. MVPs should be prioritized. We only have 4 iterations, so pick what's really important! It is good to have a few extra MVPs/non-MVPs assigned to the sprint that can be ready to be assigned and moved on as initial tasks are completed.
+
+\section{Development Requirements}
+
+\begin{enumerate}
+    \item All stories selected for a sprint should be assigned to a main person and include unit/integration tests.
+    
+    \item Follow the \textbf{Red-Red-Green-Green-Refactor} process. You don't need to worry about refactoring yet (end of semester).
+    
+    \item You are responsible for \textbf{full stack development}. In other words, you are responsible for building both the front end and the back end of your SaaS application and performing the associated integration and unit level testing.
+    
+    \item Communication and the use of branches will be key. Push, pull, and merge to main frequently. Protections have been placed on the main branch, so approval must be given for your merge to main to go through. \textbf{Work early} so that your branch is submitted in time for approval.
+    
+    \item As you finish tasks, move them along to completion in your project management tool.
+\end{enumerate}
+
+\section{Demo Expectations}
+
+For each sprint demo, you must:
+\begin{enumerate}
+    \item Share the URL to your production deployment so we can follow along
+    \item Tell us about your application and why you're making it
+    \item Go through GitHub Projects and show us what work you completed based on user story
+    \item Demo the work you completed on the production environment showing the feature in production and showing us the test cases used to test each requirement
+    \item Get customer feedback
+\end{enumerate}
+
+\section{Submission Requirements}
+
+\subsection*{On Canvas (1 person)}
+\begin{itemize}
+    \item Submit your GitHub repository address
+    \item Submit your application's production URL
+    \item Submit a short report of what was implemented and tested. You may have not completed everything---include that in your report discussing what you will do.
+    \item If your plan changed since your last submission, explain why
+    \item If you are having issues with some of your tests, document why
+    \item Record your velocity (from GitHub Projects) for later use
+\end{itemize}
+
+\subsection*{On GitHub}
+\begin{itemize}
+    \item Make sure that all project files including your tests and code are committed and pushed to GitHub on the main branch
+    \item \textbf{All} students should be pushing to GitHub. Make sure your name is associated with your GitHub pushes (For help: \url{https://help.github.com/articles/setting-your-username-in-git/}) so that you are not penalized for not contributing
+    \item \textbf{Tag your git repository revision} with ``sprint\textit{i}'' where \textit{i} is the sprint number
+    \begin{itemize}
+        \item To tag the current revision: \texttt{git tag -a sprint1}
+        \item \textbf{Warning:} You must explicitly push your tags with the command \texttt{git push --tags}. Before you submit, please make sure that we can checkout the tag---you can try this from the command line and also check the GitHub website to double check that the tag is there.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{On GitHub Projects}
+Show your point assignments, ``employee'' assignments, and progress.
+
+\subsection*{On Discord}
+One team member must post to your Dev\_Cust Group on Discord with information about what was implemented and your application's URL. Customers will see and can write posts to/from their developers.
+
+\subsection*{AI Documentation}
+You must document in your project README where and when you got help from AI and include the transcript URL for each instance of support.
+
+\subsection*{Peer Evaluations}
+Complete your peer evaluations! The activity opens immediately after the sprint deadline and has multiple stages to complete.
+
+\end{document}

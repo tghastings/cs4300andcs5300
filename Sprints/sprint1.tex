@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{CS 4300/5300 Software Engineering}
+\lhead{Sprint 1}
+\rfoot{Page \thepage}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\textbf{CS 4300/5300 Software Engineering}}\\[0.5em]
+{\Large Sprint 1 Requirements}\\[1em]
+\end{center}
+
+\section{Sprint 1 Objectives}
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+\textbf{Requirement} & \textbf{Points} \\
+\midrule
+Project in GitHub & 20 pts \\
+Tests implemented for new features & 20 pts \\
+80\% Test coverage metrics & 20 pts \\
+\midrule
+\multicolumn{2}{l}{\textbf{CI Pipeline:}} \\
+\quad AI Code Review using OpenAI Platform (each Pull Request) & 10 pts \\
+\quad Running automated tests (each commit) & 5 pts \\
+\quad Reports test coverage metrics in console (each commit) & 5 pts \\
+\midrule
+Deployed to a production environment & 20 pts \\
+\midrule
+\textbf{Total} & \textbf{100 pts} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Detailed Requirements}
+
+\subsection{Project in GitHub (20 pts)}
+Your project must be hosted in a GitHub repository with proper structure and organization.
+
+\subsection{Tests Implemented for New Features (20 pts)}
+All new features developed during this sprint must have corresponding unit and/or integration tests.
+
+\subsection{80\% Test Coverage Metrics (20 pts)}
+Your test suite must achieve at least 80\% code coverage. In Sprint 2, metrics will be added to measure your amount/quality of testing, so start now.
+
+\subsection{CI Pipeline (20 pts total)}
+Your continuous integration pipeline must include:
+\begin{itemize}
+    \item \textbf{AI Code Review (10 pts):} Using OpenAI Platform for each Pull Request
+    \item \textbf{Automated Tests (5 pts):} Running automated tests for each commit
+    \item \textbf{Coverage Reports (5 pts):} Reports test coverage metrics in console for each commit
+\end{itemize}
+
+\subsection{Production Deployment (20 pts)}
+Your application must be deployed to a production environment and accessible via URL.
+
+\vspace{2em}
+\noindent\textit{See the Common Sprint Requirements document for planning, development, demo, and submission requirements.}
+
+\end{document}
