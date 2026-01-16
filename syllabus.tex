@@ -1,0 +1,300 @@
+\documentclass[11pt]{article}
+
+% Page layout
+\usepackage[letterpaper, margin=1in]{geometry}
+
+% Typography and fonts
+\usepackage[T1]{fontenc}
+% Tables
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+
+% Links
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, itemsep=0.5em}
+\setlist[enumerate]{leftmargin=*, itemsep=0.5em}
+
+% Section formatting
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1ex plus 0.5ex minus .2ex}{0.5ex plus .2ex}
+
+% Paragraph spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{CS 4300/5300: Advanced Software Engineering}}\\[0.5em]
+{\large Fall 2025}
+\end{center}
+
+\section*{Instructor Information}
+
+\textbf{Instructor:} Dr.\ Tom Hastings
+
+\textbf{Time/Place:} 4:45pm to 6:00pm Tues/Thurs, OCSE B216
+
+\textbf{Email:} \href{mailto:thasting@uccs.edu}{thasting@uccs.edu}
+
+\textbf{Website:} \url{https://tom.hastings.dev/cv}
+
+\textbf{Office Hours:} 5:30pm -- 6:30pm Friday and By Appointment on Teams
+
+\section*{Teaching Assistant}
+
+\textbf{TA:} N/A
+
+\textbf{Email:} TBD
+
+\textbf{Office Hours:} TBD
+
+\section*{Communication}
+
+\textbf{Use Slack for MOST questions!} -- faster answers, extra feedback, easier code viewing, and all learn from each other as you hit new SE issues/challenges.
+
+Please limit emails. If you do need to email for something personal, include your course number(s) in the subject line.
+
+\textbf{On Slack, you must display your real name on our server.}
+
+Groups will be set up on Slack for easier communication within and between teams. If you have a personal question, DM me and the TA (if appicable).
+
+\textbf{Slack Link:} \url{https://join.slack.com/t/cs4300cs5300sp25/shared_invite/zt-3npo7thsh-GboDVgEt1~2pKyCB0_Jq6Q}
+
+\textbf{Official course communications will come through Canvas.}
+
+If we for some reason need to be off campus, we will use Teams for class.
+
+\section*{Prerequisites}
+
+CS 3300: Intro to Software Engineering or equivalents.
+
+\section*{Course Catalog Description}
+
+Software engineering methodologies. The software lifecycle. Emphasis on the design, development, and implementation of a software system. A course project provides the student teams with practical application of software engineering techniques.
+
+\section*{A More Accurate Description}
+
+Students will:
+\begin{itemize}
+    \item Understand the new challenges, opportunities, and open problems of SaaS (Software as a Service) relative to SWS (shrink-wrapped software)
+    \item Take a SaaS project from conception through planning, development, assessment/testing, deployment, and operations, experiencing the attendant challenges of each stage of development and deployment
+    \item Communicate efficiently and effectively with customers to gain a well-rounded view of needs and to present products/get feedback through frequent demos
+    \item Understand and use agile development methodologies and tools, including low-fi UI sketching, user stories, behavior-driven development, version control for team-based development, and management tools for cloud-computing environments
+    \item Develop testing and refactoring skills
+    \item Ethically incorporate existing work to efficiently build modular, scalable products
+    \item Develop both technical and collaboration skills for working in ``one-pizza'' software teams
+    \item Develop project management and communication skills for use with your team, managers, and customers in an agile development setting
+    \item Understand and apply fundamental programming constructs and techniques including design patterns for software architecture, higher-order functions, metaprogramming, reflection, etc.\ to improve the maintainability, modularity, and reusability of code
+\end{itemize}
+
+\section*{Required Software}
+
+\begin{itemize}
+    \item \textbf{DevEdu Access Credits} -- We will go over this in class for how to get access. This has been purchased for you through VitalSource if you opt into TAAP. If you have opted out of TAAP you can purchase directly through the application (\$99) or you can self host with the open-source project: \url{https://github.com/DevEdu-IO/docker-django/blob/master/README.md}
+\end{itemize}
+
+\section*{Course Texts}
+
+\begin{itemize}
+    \item \textbf{Engineering Software as a Service}, 2nd Edition. Armando Fox and David Patterson.\\
+    \url{http://www.saasbook.info/} (Optional)\\
+    \textit{Note: The PDF of the book is free on the website! Print/Kindle Version is available through Amazon.}
+    
+    \item \textbf{Shape Up: Stop Running in Circles and Ship Work that Matters}. Ryan Singer.\\
+    \url{http://www.basecamp.com/shapeup} (Optional)\\
+    \textit{Note: The book is available on the website, and the print version can be ordered through the website.}
+    
+    \item \textbf{Django Design Patterns and Best Practices}. Arun Ravindran, March 2015.\\
+    \url{https://learning.oreilly.com/library/view/django-design-patterns/9781783986644/}\\
+    \textit{Note: \url{https://learning.oreilly.com/library/view/temporary-access/} will allow you free access.}
+    
+    \item \textbf{Software Engineering Body of Knowledge (SWEBOK)}. Available for download from \url{http://www.swebok.org/}
+    
+    \item Any additional readings will be provided by the instructor.
+\end{itemize}
+
+\section*{Course Website and Announcements}
+
+The course information, schedule, readings, slides, assignment information, and other resources can be found on Canvas. Keep an eye on the course schedule and announcements! Information and announcements regarding the class will be posted including class cancellations due to bad weather, updates on assignments, and major answers to student questions of general interest to the class. \textit{It is each student's responsibility to check Canvas before class.}
+
+\textit{Questions should be asked using Slack in most cases.} Please check Slack using the search function within the appropriate channel before asking to see if your question has already been asked. Any student may answer questions. If a student has a borderline grade at the end of the semester, the grade may be curved up if the student participated in a lot of question answering. Please be respectful to your classmates. Questions can also be DMed to individuals and groups if your question is sensitive in nature.
+
+Some project setup, management, communication, and tracking will also use Github.
+
+\section*{Distribution of Points}
+
+Final course grades will be determined based approximately on the following percentages:
+
+\begin{itemize}
+    \item \textbf{In-class activities and participation/submission of evaluations:}
+    \begin{itemize}
+        \item 10\% (CS4300)
+        \item 7\% (CS5300)
+    \end{itemize}
+    \item \textbf{Homeworks (2):} 6\%
+    \item \textbf{Tests (2):} 30\%
+    \item \textbf{Project (in teams):} 48\%
+    \begin{itemize}
+        \item Includes presentations, write-ups, iteration submissions (individual student evaluation based on overall group evaluation and individual effort: see below)
+    \end{itemize}
+    \item \textbf{Individual Reflection Write-up:} 6\% (CS4300) or 5\% (CS5300)
+    \item \textbf{Research Paper:} 4\% (CS5300 only)
+\end{itemize}
+
+\section*{Grading Policy}
+
+All grades are based on a scale from 0--100 as follows:
+
+\begin{center}
+\begin{tabular}{cl}
+\toprule
+\textbf{Percentage} & \textbf{Grade} \\
+\midrule
+94 -- 100 & A \\
+90 -- 93 & A$-$ \\
+87 -- 89 & B$+$ \\
+84 -- 86 & B \\
+80 -- 83 & B$-$ \\
+77 -- 79 & C$+$ \\
+74 -- 76 & C \\
+70 -- 73 & C$-$ \\
+67 -- 69 & D$+$ \\
+64 -- 66 & D \\
+60 -- 63 & D$-$ \\
+Below 60 & F \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A linear shift \textbf{may} be applied to final grade averages as a one-time scale at the professor's discretion. Grades may also be raised for those who take on strong leadership roles in their groups.
+
+\textbf{No makeup tests will be given.} If the student is unable to take a test due to extreme circumstances, the student may, at the instructor's discretion, take the test \textbf{early}.
+
+\section*{Standards and Grading Criteria}
+
+Projects and homeworks must be clearly presented, complete and submitted according to instructions. Sloppy work will be returned ungraded. Any cheating will result in an immediate grade of `F' for the course and subsequent expulsion consideration from the School of Engineering administration. Students are encouraged to discuss concepts individually and in class; however, each student is expected to develop their own assignment submissions. For further details on academic honesty the student is referred to the University Catalog.
+
+The main assignments are due electronically at 11:59pm on the given due date. Work will be accepted beyond the due date at a penalty of 15\% for each 24-hour day (not `class period') late. \textbf{If the assignment is more than 3 days late, it will not be accepted for credit.} Treat your homework assignments and project iterations with the same pride and respect as you would a document presented to a customer.
+
+Team reviews and customer evaluations are due electronically at 11:59pm on the given due date. A grace period of 1 day will be given.
+
+\textbf{Extra Notes:} It is your personal responsibility to make sure that the full assignment requirements are submitted on time through Canvas and Github, even when you are working in a group. No exceptions will be given. You each are able to view all submissions made by your group, and if something is missed, multiple submissions are enabled to allow for modifications, clarifications, additions, etc.\ by any student in the group. \textbf{Failure to submit the full assignment requirements on time on Canvas will result in a penalty, even if your work has been posted to github or in other documents/locations.}
+
+\textbf{Coding assignments that will not execute without error will be penalized in most cases.} We will attempt to get the code to run, spending up to 10 minutes per assignment. If it cannot be executed at that point, you will receive a 0. If parts can be executed, but not all, a partial grade will be given. If this is an error on our part or a difference in environment issue, please request a regrade, and we will meet with you personally to regrade the assignment.
+
+\section*{Project Grades}
+
+Project grades will be provided in two forms: group/individual.
+
+\begin{itemize}
+    \item \textbf{``Unmodified''/group grades} are the grades assigned to the group work as a whole. These grades are based on the goals of the group and what was accomplished overall.
+    \item \textbf{``Modified''/individual grades} account for the effort that the student, as an individual, put into the iteration.
+\end{itemize}
+
+The ``unmodified''/group grade for each student will \textbf{serve as a starting grade} for all students in the group. ``Modified''/individual grades will be assigned based on the student's personal fulfillment of the requirements in the iteration. Personal fulfillment requirements include the code, tests, and evaluation performed by each student towards the overall iteration goal. These are reported by the student and are evidenced in the group's github codebase. Additionally, each student will report at the end of each iteration regarding their performance and that for teammates, which will factor into the ``Modified''/individual grades.
+
+\textbf{Only ``Modified''/individual grades are used in overall project grade calculation.}
+
+\textbf{Complete your team surveys each iteration!} These count toward your participation grade AND are used partially to modify your grade. If you do not fill them out, you will not be able to advocate for yourself, and you will not receive the partial feedback from your teammates! (Some answers only I have access to, as detailed in the survey). We will also be checking your participation in the project management tool, on the github main branch, etc.
+
+\section*{Regrades}
+
+Regrading must be requested \textbf{within 1 week} of the grade submission -- no exceptions! To request a regrade, submit an email with the following information:
+\begin{itemize}
+    \item Question section to be reviewed
+    \item Reason for review
+\end{itemize}
+
+\section*{Exams}
+
+There will be two exams, both online. No external resources are permitted. This includes other students, books, notes, or anything online. AI is NOT to be used. Indication of any of these will result in failure.
+
+\section*{Independent Reflection Writeup}
+
+The paper will be 3--5 pages in which the student will reflect on all major topics discussed in the class and relate them to their project experiences.
+
+\section*{Research Paper (CS5300 Students Only)}
+
+The paper will be 4 pages with at least five sources. Acceptable sources are professional books and journals only. No web-site references are acceptable toward the reference count. The paper should list the sources at the end in IEEE format and citations should appear throughout the paper using \LaTeX.
+
+\section*{Use of AI Tools}
+
+While AI tools can be valuable resources for learning and exploring new ideas, using them to complete assignments without proper attribution is a form of plagiarism. You are encouraged to use AI tools for brainstorming, study assistance, or learning, but any content generated by AI that is included in your submitted work must be clearly cited and should not replace your own analysis or understanding. Failure to do so will be considered academic misconduct.
+
+Violations of these principles will result in penalties that may include a failing grade on the assignment, a failing grade in the course, or further disciplinary action in accordance with university policies.
+
+\section*{Attendance}
+
+Students are expected to come to class on time, be prepared to participate, and read the assigned material before class. Cell phone and laptop misuse (anything other than note taking) or other disruptive behavior will not be permitted. Each student is 100\% responsible for all material and announcements covered in class. If a class is missed, class notes should be obtained from another student. All slides will be posted on Canvas. Note that some important material covered in the lectures will not be contained in the text, and the selected material from the text will be augmented and emphasized in the lectures.
+
+This course also includes a group project. Some work for the project will take place during class.
+
+\section*{Religious Accommodations}
+
+If due to religious obligations you plan to request adjustments with scheduled exams, assignments or required attendance in this class, please contact me as soon as possible. I will work with you and university counsel's office to ensure a reasonable accommodation is made.
+
+\section*{Late Drops and Incompletes}
+
+A drop after the normal deadline date is allowed by the college very rarely and will be approved only if there is documented evidence that the student was prevented from attending a significant number of classes by circumstances clearly beyond his/her control (e.g., illness). If the instructor approves the drop, the Computer Science Department Chair and the EAS Dean have the final authority in carrying out the EAS College policy and granting approval.
+
+A grade of `Incomplete' is very rare and is allowed only when the student has already completed the majority of the course work but has insurmountable problems with completing the remaining work due to circumstances clearly beyond their control. An `Incomplete' is not justified in the case of a student who has simply chosen not to do the work on time.
+
+\section*{Class Cancellation}
+
+In the event of a class cancellation on an exam or assignment due date, students should assume that the exam will be given or that the assignment will be due the next regular class time and should come to class prepared. Assignments that are to be submitted electronically will be due as scheduled unless an announcement is made/posted otherwise. Future assignments and tests should also be expected to be due/occur on the dates listed in the class schedule, despite class cancellations, unless you are otherwise notified.
+
+\section*{Course Expectations}
+
+Due to the nature of this material, the new concepts encountered, and the large amount of design and documentation and programming required, this will be a time intensive course, especially in the first half of the semester. Because it is a senior/graduate level course, the work quality expectations will be high. It is also a Summit Experience for undergraduates.
+
+While `cramming' for other courses may result in an adequate grade, that methodology is almost certainly doomed to failure in a course of this type. It is important that you exert consistent and fervent effort bit by bit throughout the semester in order to master the material.
+
+\section*{Summit Course}
+
+This course is a Summit Experience in the Campus Curriculum. Students take a Summit Experience in their major in order to graduate. Summit courses bridge general education goals with discipline objectives resulting in an enriching and culminating experience in a student's undergraduate education. Core components of Summit courses include a focus on core ethical principles of the discipline as well as communication skills.
+
+\textbf{Summit courses help students learn:}
+\begin{itemize}
+    \item Critical or creative thinking
+    \item Quantitative or Qualitative reasoning
+    \item Communication (public speaking/presenting, interpersonal (one to one) and/or group communication, or digital, visual, and performance media)
+    \item Core ethical principles in the discipline
+\end{itemize}
+
+\textbf{Essential Learning Outcomes:}
+\begin{itemize}
+    \item Gather, critically analyze and evaluate quantitative information within relevant disciplinary contexts
+    \item Gather, critically analyze and evaluate qualitative information within relevant disciplinary contexts
+    \item Communicate through a prepared, purposeful, presentation or goal-oriented interpersonal or group interaction
+    \item Demonstrate the core ethical principles and responsible methods of your discipline
+\end{itemize}
+
+\section*{Responsibilities}
+
+Lost data or failed computers are generally not valid excuses for late assignments. The lab computers are provided as a resource and are always an alternative to your own personal computer usage. Always back up all programs and documents to your provided private class github accounts to prevent loss, and especially if you are inexperienced with git, use a secondary backup method. On git, push WORKING code frequently. Outside of git as an extra backup, save data frequently and with different names so that you have multiple copies. Don't risk losing hours of work when a hard drive fails, the computer crashes, or\ldots!
+
+\section*{Important Dates}
+
+For questions about drop dates, census dates, payment deadlines, etc., the full semester schedule for the school may be viewed on the UCCS Academic Calendar website.
+
+\section*{Office Hours}
+
+I will be available during my official office hours and by appointment. If office hours are canceled, there will be an announcement posted. If you drop by our ``office'' outside official office hours without an appointment, we may have time to see you, but we'll also feel free to have you schedule an appointment for a later time instead.
+
+\textbf{Use Slack for class-related questions!} If you have questions about course tools, assignments, coding issues, etc., post to Slack in the appropriate channel. If something is of personal nature, DM me (and/or) the TA. If emailing, put CS4300 or CS5300 in your email subject line \textbf{always}. Otherwise, I am \textbf{very likely} to miss it.
+
+The TA and teacher will be checking Slack daily, but do not wait until the last minute to ask questions -- it is very likely that we will not see your posts \textbf{and} be able to get back to you. We will be checking every 24 hours. In your questions, be as specific as possible so we can help quickly.
+
+\section*{Students with Disabilities}
+
+If you are a student with a disability and believe you will need accommodations for this class, it is your responsibility to register with Disability Services and provide them with documentation of your disability. They will work with you to determine what accommodations are appropriate for your situation. To avoid any delay, you should contact Disability Services as soon as possible. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact Disability Services for more information at Main Hall room 105, 719-255-3354 or \href{mailto:dservice@uccs.edu}{dservice@uccs.edu}.
+
+\end{document}
