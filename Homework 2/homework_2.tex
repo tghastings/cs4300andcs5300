@@ -180,26 +180,31 @@ You will create an API using serializers and URLs.
             \end{itemize}
 \end{itemize}
 
-\subsection{Testing \& Running Locally (30 minutes)}
+\subsection{Testing \& Running Locally (1 hour)}
 \begin{itemize}
     \item You will want to run the application locally inside of the DevEdu environment.
     \begin{itemize}
-        \item Start the server. Then naviage to the "app" button inside of DevEdu dashboard (next to editor). The link will be similar to \textit{https://app-containerName-SectionID.devedu.io/}
+        \item Start the server. Then navigate to the "app" button inside of DevEdu dashboard (next to the editor). The link will be similar to \textit{https://app-containerName-SectionID.devedu.io/}
         \begin{lstlisting}[style=customcode,language=bash]
 python3 manage.py runserver 0.0.0.0:3000
-{% endblock %}
 \end{lstlisting}
     \end{itemize}
 
     \item Write Unit Tests: 
     \begin{itemize}
-        \item Create unit tests for your models in tests.py.
+        \item Create unit tests for your code in tests.py.
     \end{itemize}
 \end{itemize}
 \begin{itemize}
     \item Integration Testing: 
     \begin{itemize}
         \item Test the API endpoints to ensure they return the correct responses (status codes, data format).
+    \end{itemize}
+\end{itemize}
+\begin{itemize}
+    \item Behavior-Driven-Design (BDD) Testing: 
+    \begin{itemize}
+        \item Test the behavior of the application using \href{https://behave-django.readthedocs.io/en/stable/}{Behave}.
     \end{itemize}
 \end{itemize}
 
@@ -276,7 +281,7 @@ Testing &
 20 &
 - Comprehensive unit and integration tests are written.\\
 & &
-- Tests cover edge cases and provide adequate coverage for all major functionality.\\
+- Tests cover edge cases and provide adequate coverage for all major functionality (80\%  Coverage).\\
 & &
 - Tests are properly organized and easy to understand. \\
 & & 
