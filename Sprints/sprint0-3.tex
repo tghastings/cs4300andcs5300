@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{CS 4300/5300 Software Engineering}
+\lhead{Sprint 0-3}
+\rfoot{Page \thepage}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\textbf{CS 4300/5300 Software Engineering}}\\[0.5em]
+{\Large Sprint 0-3: Initial View and Deployment}\\[1em]
+\end{center}
+
+\section{Purpose}
+
+Sprint 0-3 is your \textbf{walking skeleton}: the thinnest possible slice of your application that runs end to end, in production, on a URL the rest of us can open.
+
+It is deliberately not much of a feature. That is the point. Every hard part of shipping software---the deployment, the database, the environment configuration, the secrets---has to work before your first real feature can reach a user. Discovering those problems now is far cheaper than discovering them during Sprint 1, when they will be sitting on top of code you also have to debug.
+
+\noindent\textbf{Do not save the deployment for the last day.} Deployment is the requirement most likely to consume an entire evening, and it is worth 30 points.
+
+\section{Sprint 0-3 Objectives}
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+\textbf{Requirement} & \textbf{Points} \\
+\midrule
+Django project runs locally & 15 pts \\
+At least one model with a migration & 15 pts \\
+Working view rendered through a template & 20 pts \\
+At least one passing automated test & 10 pts \\
+Deployed to a production environment & 30 pts \\
+Repository hygiene & 10 pts \\
+\midrule
+\textbf{Total} & \textbf{100 pts} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Detailed Requirements}
+
+\subsection{Django Project Runs Locally (15 pts)}
+Your team repository contains a Django project that every member can start on their own machine. Dependencies must be recorded so that a teammate can install them without asking anyone what to install.
+
+\subsection{At Least One Model with a Migration (15 pts)}
+Define at least one model representing something real in your problem domain, and generate and apply its migration. Migration files must be committed to the repository---they are part of your source code, not build output.
+
+Pick a model that your application actually needs. A placeholder model that you delete in Sprint 1 wastes the exercise.
+
+\subsection{Working View Rendered Through a Template (20 pts)}
+Implement a complete path from URL to browser:
+
+\begin{center}
+URL $\rightarrow$ View $\rightarrow$ Model $\rightarrow$ Template $\rightarrow$ Browser
+\end{center}
+
+The page must display data that came out of your database, not text hard-coded into the template. It does not need to be styled and it does not need to be impressive. It needs to be real.
+
+\subsection{At Least One Passing Automated Test (10 pts)}
+Write at least one automated test that demonstrates something meaningful about your application---that your model stores what it should, or that your view returns what it should.
+
+A test asserting \texttt{True == True} does not receive credit. Ask yourself what behavior the test actually demonstrates.
+
+\subsection{Deployed to a Production Environment (30 pts)}
+Your application must be deployed and reachable at a public URL. Submit that URL. We will open it.
+
+The deployed version must be the code in your repository, and it must show the same working view described above. An application that runs on your laptop but not in production has not met this requirement.
+
+\subsection{Repository Hygiene (10 pts)}
+\begin{itemize}
+    \item Every team member has pushed at least one commit, correctly attributed to their name (\href{https://help.github.com/articles/setting-your-username-in-git/}{learn more})
+    \item Commit messages communicate what changed
+    \item Secrets, credentials, and API keys are \textbf{not} committed to the repository
+    \item A \texttt{.gitignore} excludes virtual environments, databases, and editor files
+    \item The README explains how to run the project locally
+\end{itemize}
+
+Commit attribution matters now rather than later. A team member whose commits are attributed to the wrong identity receives no contribution credit, and that becomes much harder to untangle after four sprints.
+
+\section{Looking Ahead to Sprint 1}
+
+Sprint 1 requires a CI pipeline, 80\% test coverage, and tests for every new feature. Teams that finish Sprint 0-3 early should start on continuous integration immediately rather than waiting---getting automated tests running on every commit is far easier on a small codebase than on a large one.
+
+\section{Submission Requirements}
+
+\subsection*{On Canvas (1 person per team)}
+\begin{itemize}
+    \item Submit your GitHub repository address
+    \item Submit your application's production URL
+    \item Submit a short report describing what runs, what does not, and what gave your team the most trouble
+\end{itemize}
+
+\subsection*{On GitHub}
+\begin{itemize}
+    \item All project files, migrations, and tests committed and pushed to the main branch
+    \item All team members pushing under their own correctly configured identity
+\end{itemize}
+
+\subsection*{On Slack}
+One team member must post to your Dev\_Cust group with your application's production URL so that your customer can open it.
+
+\subsection*{AI Documentation}
+Document in your project README where and when you got help from AI, and include the transcript URL for each instance of support.
+
+\end{document}

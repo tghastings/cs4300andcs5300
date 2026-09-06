@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{CS 4300/5300 Software Engineering}
+\lhead{Sprint 0-2}
+\rfoot{Page \thepage}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\textbf{CS 4300/5300 Software Engineering}}\\[0.5em]
+{\Large Sprint 0-2: User Stories, Lo-Fi UI, and Storyboards}\\[1em]
+\end{center}
+
+\section{Purpose}
+
+You know what you are building and who wants it. Now you turn that into work your team can actually pick up.
+
+This is the largest Sprint 0 deliverable, and the one your next four sprints depend on. A weak backlog here produces four sprints of confusion.
+
+\section{Sprint 0-2 Objectives}
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+\textbf{Requirement} & \textbf{Points} \\
+\midrule
+High-level user stories (at least 4) & 25 pts \\
+Story decomposition (at least 6) & 25 pts \\
+Lo-fi UI alignment & 15 pts \\
+Storyboard clarity & 10 pts \\
+Gherkin acceptance criteria & 10 pts \\
+Sprint planning logic & 10 pts \\
+Cohesion and professional quality & 5 pts \\
+\midrule
+\textbf{Total} & \textbf{100 pts} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Detailed Requirements}
+
+\subsection{High-Level User Stories (25 pts)}
+Write at least \textbf{four} high-level stories describing the core capabilities of your application. Each must use the Connextra format:
+
+\begin{center}
+\textit{As a} [user], \textit{I want to} [goal], \textit{So that} [reason/value].
+\end{center}
+
+Each story must be SMART---specific, measurable, achievable, relevant, and scoped to a meaningful user-visible capability.
+
+You will lose points for stories that omit the ``So that'' clause, state vague goals such as ``manage stuff,'' are too granular to be high-level, or are too broad to finish in the semester.
+
+\subsection{Story Decomposition (25 pts)}
+Break your high-level stories into at least \textbf{six} decomposed stories sized to fit inside a single sprint. Each decomposed story must trace clearly back to one of your high-level stories, and must also use the Connextra format.
+
+Separate your high-level stories from your decomposed stories clearly in the submission.
+
+\subsection{Lo-Fi UI Alignment (15 pts)}
+Produce low-fidelity mockups covering your high-level stories. Show the major screens, the navigation between them, and the key user actions on each.
+
+These should be sketches or wireframes. Polished high-fidelity mockups are not what is being asked for, and they cost you time you do not have.
+
+\subsection{Storyboard Clarity (10 pts)}
+For each high-level story, write a brief storyboard explaining how the user enters the workflow, what actions they take, what the system returns, and what successful completion looks like.
+
+\subsection{Gherkin Acceptance Criteria (10 pts)}
+Write acceptance criteria as Gherkin scenarios---\textbf{Given}, \textbf{When}, \textbf{Then}---on your decomposed stories in GitHub Projects.
+
+These scenarios become the tests you write in Sprint 1, so write them as statements about observable behavior. You will be demonstrating these scenarios in class throughout the semester.
+
+\subsection{Sprint Planning Logic (10 pts)}
+Set up a GitHub Projects board containing every story in a backlog, and distribute your decomposed stories across four sprint groupings.
+
+Your plan should deliver visible user value early, build functionality incrementally, and avoid concentrating unrealistic scope in any one sprint. Putting every story in Sprint 1 and leaving later sprints empty is not a plan.
+
+\subsection{Cohesion and Professional Quality (5 pts)}
+Combine all artifacts into one PDF. Sections should align with each other---the stories, the UI, the storyboards, and the sprint plan should all describe the same application.
+
+\section{Submission Requirements}
+
+\subsection*{On Canvas (1 person per team)}
+\begin{itemize}
+    \item Submit a single PDF containing all artifacts above
+    \item Submit your GitHub repository address
+\end{itemize}
+
+\subsection*{On GitHub Projects}
+\begin{itemize}
+    \item All stories entered as cards in the backlog
+    \item Cards distributed across four sprint groupings
+    \item Gherkin acceptance criteria recorded on decomposed stories
+\end{itemize}
+
+\subsection*{AI Documentation}
+Document in your project README where and when you got help from AI, and include the transcript URL for each instance of support.
+
+\end{document}
