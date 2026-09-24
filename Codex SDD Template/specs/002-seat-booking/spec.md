@@ -3,12 +3,12 @@
 **Status:** Draft: **you finish this spec**
 **Author:** <your name>  **Date:** <YYYY-MM-DD>
 
-> The user stories and first criteria are started for you. Every `TODO` is a decision **you**
+> The user stories (US-#) and first acceptance criteria (AC-#) are started for you. Every `TODO` is a decision **you**
 > make. Compare with `001-movie-listings/spec.md` for the level of detail to aim for.
 
 ## 1. Problem
 A moviegoer who has picked a movie needs to see which seats are free and reserve one.
-(HW2 §1 "Book seats via the API"; §3.3 `SeatViewSet` "for seat availability and booking";
+(Homework 2 (HW2) §1 "Book seats via the API"; §3.3 `SeatViewSet` "for seat availability and booking";
 §3.5 `/api/seats/`; template `seat_booking.html`.)
 
 ## 2. User stories

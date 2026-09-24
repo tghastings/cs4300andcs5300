@@ -1,6 +1,6 @@
 # Prompt 3 — Break it into tasks
 
-> 📖 **Book:** test-first tasks and red–green–refactor are [§2.3.2 TDD](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development); "every acceptance criterion (AC) is covered" is [§3.4.4 traceability](https://www.swebook.org/chapters/03-user-requirements/index.html#344-tracing-requirements-to-tests-and-backlog-items).
+> 📖 **Book:** test-first tasks and red–green–refactor are [§2.3.2 test-driven development (TDD)](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development); "every acceptance criterion (AC) is covered" is [§3.4.4 traceability](https://www.swebook.org/chapters/03-user-requirements/index.html#344-tracing-requirements-to-tests-and-backlog-items).
 
 ```
 Read specs/<NNN-feature>/spec.md and plan.md. Fill in specs/<NNN-feature>/tasks.md.

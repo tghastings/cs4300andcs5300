@@ -5,10 +5,13 @@
 
 ## 1. Problem
 Moviegoers need to see what's showing before they can book a seat. Staff need to add, update
-and remove movies. (HW2 §1 and §3.3: "View movie listings", `MovieViewSet` "for CRUD operations".)
+and remove movies. (Homework 2 (HW2) §1 and §3.3: "View movie listings", and `MovieViewSet` "for CRUD operations",
+where CRUD means create, read, update, delete.)
 
 ## 2. User stories
-> 📖 **Book:** [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) (INVEST)
+> 📖 **Book:** [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) (INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable)
+
+Each user story (US-#) is numbered so the acceptance criteria can trace back to it.
 
 - **US-1:** As a moviegoer, I want to see a list of movies, so that I can pick one to watch.
 - **US-2:** As a moviegoer, I want to see a movie's details (description, release date,
@@ -17,6 +20,8 @@ and remove movies. (HW2 §1 and §3.3: "View movie listings", `MovieViewSet` "fo
   listings can be managed.
 
 ## 3. Acceptance criteria
+Each acceptance criterion (AC-#) names the user story it checks, e.g., AC-1 (US-1).
+
 > 📖 **Book:** [§3.4.1 Given / When / Then](https://www.swebook.org/chapters/03-user-requirements/index.html#given--when--then-writing-acceptance-criteria-as-scenarios). AC-6 tests the boundary (duration 0): [§10.4.2 boundary values](https://www.swebook.org/chapters/10-testing/index.html#1042-boundary-value-coverage).
 
 **AC-1 (US-1): List movies in the UI**

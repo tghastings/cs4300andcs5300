@@ -1,6 +1,6 @@
 # HW2 with Codex: Spec-Driven Development Template
 
-**Optional.** Use this if you want to build **Homework 2 (Movie Theater Booking)** with Codex,
+**Optional.** Use this if you want to build **Homework 2 (HW2): Movie Theater Booking** with Codex,
 the AI coding tool UCCS provides. You are not required to use AI.
 Assignment: https://tghastings.github.io/cs4300andcs5300/homework_2.pdf
 
@@ -67,7 +67,7 @@ Deployment (Render) and documentation aren't features. They're on the checklist 
   **Given/When/Then**, because they become your Behave scenarios.
 
 > **AC = acceptance criterion:** one specific, testable condition the feature must meet to count as
-> done, numbered AC-1, AC-2, and so on. **US** = user story. Every AC traces to a user story, and every
+> done, numbered AC-1, AC-2, and so on. **US** = user story, numbered US-1, US-2, and so on. Every AC traces to a user story, and every
 > AC gets at least one test, so "is this feature done?" has a yes/no answer.
 
 Then paste `prompts/01-specify.md`. **Codex reviews your spec; it doesn't write it.**
@@ -108,14 +108,14 @@ The whole workflow is §13.5; the rows below point to where each piece is taught
 | In this template | 📖 SWEBook | How it connects |
 |---|---|---|
 | The workflow, `AGENTS.md` | [§13.5 Spec-Driven Development](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#135-spec-driven-development), [§13.6 Context as Infrastructure](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#136-context-as-infrastructure-claudemd-agentsmd-and-skills) | Specify → Plan → Tasks → Implement with a human checkpoint between each; `AGENTS.md` is the instructions file the agent loads every session. |
-| User stories (US-#) | [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) | INVEST: small, independent, testable stories. |
+| User stories (US-#) | [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) | INVEST (Independent, Negotiable, Valuable, Estimable, Small, Testable): small, independent, testable stories. |
 | Given/When/Then criteria (AC-#) | [§3.4.1 Given / When / Then](https://www.swebook.org/chapters/03-user-requirements/index.html#given--when--then-writing-acceptance-criteria-as-scenarios) | Criteria written as scenarios, which Behave then runs. |
 | Open questions, spec review | [§3.1.2 Requirements Challenges](https://www.swebook.org/chapters/03-user-requirements/index.html#312-requirements-challenges) | Ambiguous language is what prompt 1 hunts for. |
-| Out of scope | [§4.4.1 MoSCoW Prioritization](https://www.swebook.org/chapters/04-requirements-analysis/index.html#441-must-should-could-wont-moscow-prioritization) | "Won't have (this time)" written down stops scope creep. |
+| Out of scope | [§4.4.1 MoSCoW Prioritization](https://www.swebook.org/chapters/04-requirements-analysis/index.html#441-must-should-could-wont-moscow-prioritization) | MoSCoW (Must/Should/Could/Won't have): writing down "Won't have (this time)" stops scope creep. |
 | AC → test (`Spec ref`, `covers:`) | [§3.4.4 Tracing Requirements to Tests](https://www.swebook.org/chapters/03-user-requirements/index.html#344-tracing-requirements-to-tests-and-backlog-items) | Every requirement traces forward to a test, and every test back to a requirement. |
-| Plan: models, views, templates, API | [§7.3 Model-View-Controller](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller), [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis) | Django's MTV applies closely related separation-of-concerns ideas, with different names and role boundaries; DRF viewsets are resources + HTTP verbs. |
-| Tasks, red → green → refactor | [§2.3.2 Testing: Make It Central to Development](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development) | TDD: failing test, least code to pass, clean up. A test that passes immediately is a verification test, not a red → green cycle. |
-| Unit, API and Behave tests | [§10.2 Levels of Testing](https://www.swebook.org/chapters/10-testing/index.html#102-levels-of-testing) | Unit and integration tests, plus BDD acceptance tests (§10.2.3). |
+| Plan: models, views, templates, API | [§7.3 Model-View-Controller](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller), [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis) | Django's Model-Template-View (MTV) pattern applies closely related separation-of-concerns ideas, with different names and role boundaries; Django REST Framework (DRF) viewsets are resources + HTTP verbs. |
+| Tasks, red → green → refactor | [§2.3.2 Testing: Make It Central to Development](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development) | Test-driven development (TDD): failing test, least code to pass, clean up. A test that passes immediately is a verification test, not a red → green cycle. |
+| Unit, API and Behave tests | [§10.2 Levels of Testing](https://www.swebook.org/chapters/10-testing/index.html#102-levels-of-testing) | Unit and integration tests, plus behavior-driven development (BDD) acceptance tests (§10.2.3). |
 | Error cases, edge cases | [§10.4 Black-Box Testing](https://www.swebook.org/chapters/10-testing/index.html#104-input-coverage-i-black-box-testing) | Equivalence classes and boundary values (e.g., duration 0). |
 | Coverage ≥ 80% | [§10.3 Code Coverage I](https://www.swebook.org/chapters/10-testing/index.html#103-code-coverage-i-white-box-testing), [§10.1.3 Test Adequacy](https://www.swebook.org/chapters/10-testing/index.html#1013-test-adequacy-deciding-when-to-stop) | What statement and branch coverage do (and don't) tell you. 80% is a floor, not the goal. |
 | No double booking (002) | [§7.2.1 The Shared-Data Pattern](https://www.swebook.org/chapters/07-architectural-patterns/index.html#721-the-shared-data-pattern) | The data store owns consistency, concurrency control and integrity constraints. |

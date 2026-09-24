@@ -3,16 +3,18 @@
 **Spec:** [spec.md](spec.md)   **Status:** Approved (worked example)
 
 ## 1. Approach
-One `Movie` model, a `ModelSerializer`, and a DRF `ModelViewSet` registered on a
-`DefaultRouter` at `/api/movies/`. That gives full CRUD with correct status codes and very little
+One `Movie` model, a `ModelSerializer`, and a Django REST Framework (DRF) `ModelViewSet` registered on a
+`DefaultRouter` at `/api/movies/`. That gives full create, read, update, delete (CRUD) support with correct status codes and very little
 code. The UI is a plain Django view that renders `movie_list.html` from the same model, so the
 page and the API always show the same data.
 **Rejected:** writing separate `APIView`s for list, create and detail. It's more code, and the
 assignment specifically asks for viewsets.
 
-> 📖 **Book:** Django's MTV applies ideas closely related to [§7.3 Model-View-Controller], with different names and role boundaries(https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller); a viewset exposes a resource through HTTP verbs, [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis).
+> 📖 **Book:** Django's Model-Template-View (MTV) pattern applies ideas closely related to [§7.3 Model-View-Controller](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller), with different names and role boundaries; a viewset exposes a resource through HTTP verbs, [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis).
 
 ## 2. Data model
+Each **Spec ref** names the acceptance criterion (AC-#) in [spec.md](spec.md) that the row serves.
+
 | Model | Field | Type | Constraints | Spec ref |
 |---|---|---|---|---|
 | Movie | title | CharField | max_length=200, required | AC-6 |

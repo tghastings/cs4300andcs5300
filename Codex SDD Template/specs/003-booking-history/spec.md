@@ -3,10 +3,10 @@
 **Status:** Draft: **you finish this spec**
 **Author:** <your name>  **Date:** <YYYY-MM-DD>
 
-> The user stories and first criteria are started for you. Every `TODO` is a decision **you** make.
+> The user stories (US-#) and first acceptance criteria (AC-#) are started for you. Every `TODO` is a decision **you** make.
 
 ## 1. Problem
-Moviegoers need to see what they've booked. (HW2 §1 "Check their booking history via the API";
+Moviegoers need to see what they've booked. (Homework 2 (HW2) §1 "Check their booking history via the API";
 §3.3 `BookingViewSet` "for users to book seats and view their booking history"; §3.5
 `/api/bookings/`; template `booking_history.html`.)
 

@@ -3,8 +3,8 @@
 **Spec:** [spec.md](spec.md)   **Status:** Draft | Approved
 
 > This says **how** the spec will be built. Codex drafts it (prompts/02-plan.md) and you approve it. Don't approve
-> anything you can't explain. The rows already filled in come from AC-2 to AC-4 and AC-7, which every
-> HW2 solution needs. Keep them, and replace each `TODO` with your decision.
+> anything you can't explain. The rows already filled in come from acceptance criteria (AC) numbered AC-2 to AC-4 and AC-7, which every
+> Homework 2 (HW2) solution needs. Keep them, and replace each `TODO` with your decision.
 
 ## 1. Approach
 <!-- A short paragraph: the overall design and why it was chosen over the alternatives. -->

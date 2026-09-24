@@ -4,6 +4,7 @@
 
 > Each task is one small test-first increment and one commit: red → green → refactor when the behavior is missing,
 > or a verification test if it already passes. Do them in order.
+> Each task names its test and the acceptance criterion (AC-#) it covers.
 > Codex ticks the box when the task's tests pass. **You** commit.
 
 - [ ] **T1** — <what> · test: `<test name>` · covers: AC-?

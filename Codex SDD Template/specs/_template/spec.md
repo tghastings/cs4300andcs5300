@@ -10,9 +10,10 @@
 <!-- One or two sentences: who has what problem? -->
 
 ## 2. User stories
-> 📖 **Book:** [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) (INVEST)
+> 📖 **Book:** [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) (INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable)
 
-<!-- As a <role>, I want <capability>, so that <benefit>. Keep them small and independent. -->
+<!-- As a <role>, I want <capability>, so that <benefit>. Keep them small and independent.
+     Number each user story (US-#): US-1, US-2, ... -->
 - **US-1:** As a …, I want …, so that …
 - **US-2:** …
 
@@ -46,7 +47,7 @@
 |  |  |  |  |
 
 ## 6. Out of scope
-> 📖 **Book:** the "Won't have" of [§4.4.1 MoSCoW](https://www.swebook.org/chapters/04-requirements-analysis/index.html#441-must-should-could-wont-moscow-prioritization)
+> 📖 **Book:** the "Won't have" of [§4.4.1 MoSCoW](https://www.swebook.org/chapters/04-requirements-analysis/index.html#441-must-should-could-wont-moscow-prioritization) (Must/Should/Could/Won't have)
 
 <!-- What this feature deliberately does NOT do. This stops scope creep (including from the AI). -->
 -

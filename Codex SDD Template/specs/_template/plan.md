@@ -3,9 +3,9 @@
 **Spec:** [spec.md](spec.md)   **Status:** Draft | Approved
 
 > This says **how** the spec will be built. Codex drafts it (prompts/02-plan.md) and you approve it. Don't approve
-> anything you can't explain.
+> anything you can't explain. Each **Spec ref** names the acceptance criterion (AC-#) in `spec.md` that the row serves.
 >
-> 📖 **Book:** [§13.5 Spec-Driven Development](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#135-spec-driven-development) (the Plan phase); Django MTV (related to MVC): [§7.3](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller); APIs: [§7.5.4](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis).
+> 📖 **Book:** [§13.5 Spec-Driven Development](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#135-spec-driven-development) (the Plan phase); Django's Model-Template-View (MTV) pattern (related to Model-View-Controller, MVC): [§7.3](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller); APIs: [§7.5.4](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis).
 
 ## 1. Approach
 <!-- A short paragraph: the overall design and why it was chosen over the alternatives. -->

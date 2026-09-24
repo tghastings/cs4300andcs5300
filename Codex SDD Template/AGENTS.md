@@ -3,7 +3,7 @@
 This project uses **spec-driven development**. A student in CS 4300/5300 at UCCS owns this code
 and must be able to explain every line of it. You are a pair programmer, not the author.
 
-## Project context: HW2 Movie Theater Booking
+## Project context: Homework 2 (HW2), Movie Theater Booking
 - Assignment: https://tghastings.github.io/cs4300andcs5300/homework_2.pdf
 - The Django project is `movie_theater_booking` and lives in the student's `homework2/` folder.
   The app is `bookings`.
@@ -11,12 +11,12 @@ and must be able to explain every line of it. You are a pair programmer, not the
   - **Movie:** title, description, release date, duration
   - **Seat:** seat number, booking status
   - **Booking:** movie, seat, user, booking date
-- API: Django REST Framework serializers plus `MovieViewSet`, `SeatViewSet` and `BookingViewSet`,
+- API: Django REST Framework (DRF) serializers plus `MovieViewSet`, `SeatViewSet` and `BookingViewSet`,
   routed to `/api/movies/`, `/api/seats/` and `/api/bookings/`.
 - UI: Django templates in `bookings/templates/bookings/`: `base.html` (Bootstrap CSS link),
   `movie_list.html`, `seat_booking.html` and `booking_history.html`. The UI shows and changes the
   same data as the API.
-- Tests: unit and integration tests (`python manage.py test`) plus BDD with **Behave** through
+- Tests: unit and integration tests (`python manage.py test`) plus behavior-driven development (BDD) tests with **Behave** through
   **behave-django** (`features/`, run with `python manage.py behave`; `behave_django` is in
   `INSTALLED_APPS`). The course requires **≥ 80% coverage**.
 - In DevEdu, run with `python manage.py runserver 0.0.0.0:3000`. The app is deployed on **Render**.

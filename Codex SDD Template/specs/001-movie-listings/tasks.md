@@ -2,11 +2,12 @@
 
 **Plan:** [plan.md](plan.md)
 
-> Each task is one small test-first increment and one commit: red → green → refactor when the behavior is missing. Codex ticks the box. **You** commit.
+> Each task (T#) is one small test-first increment and one commit: red → green → refactor when the behavior is missing.
+> Each task names its test and the acceptance criterion (AC-#) it covers. Codex ticks the box. **You** commit.
 > Some tests pass as soon as they're written, because `ModelViewSet` already does the work (T7–T10).
 > Those are verification tests, not red → green cycles. That's fine: Codex should say so, and not invent code just to see red.
 >
-> 📖 **Book:** TDD, [§2.3.2](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development). T14–T15 are BDD acceptance tests, [§10.2.3](https://www.swebook.org/chapters/10-testing/index.html#1023-functional-system-and-acceptance-testing).
+> 📖 **Book:** test-driven development (TDD), [§2.3.2](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development). T14–T15 are behavior-driven development (BDD) acceptance tests, [§10.2.3](https://www.swebook.org/chapters/10-testing/index.html#1023-functional-system-and-acceptance-testing).
 
 - [ ] **T1** — `Movie` model + migration + `__str__` + ordering · test: `test_movie_str_and_ordering` · covers: Data
 - [ ] **T2** — `MovieSerializer` + `MovieViewSet` + router; `GET /api/movies/` · test: `test_list_movies` · covers: AC-4
