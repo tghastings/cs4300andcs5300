@@ -11,7 +11,9 @@ Review it like a senior engineer and give me:
 2. Missing acceptance criteria, especially error cases, edge cases and empty states.
 3. Acceptance criteria that can't be tested as written, and why.
 4. Anything that describes HOW (implementation) instead of WHAT (behavior).
-5. Up to 5 questions I should answer before planning.
+5. Anything that conflicts with, or is missing from, the HW2 requirements
+   (https://tghastings.github.io/cs4300andcs5300/homework_2.pdf).
+6. Up to 5 questions I should answer before planning.
 
 Keep it to a numbered list. I'll decide what to change.
 ```

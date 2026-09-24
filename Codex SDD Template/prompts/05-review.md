@@ -15,4 +15,5 @@ Then list:
 - Anything a code reviewer would flag (naming, duplication, missing docstrings, security)
 ```
 
-**Then you:** fix the gaps (each fix is a new task), and run `coverage report` and `behave`.
+**Then you:** fix the gaps (each fix is a new task), run `coverage report` and `behave`, and
+work through the "Before you submit" checklist in README.md.

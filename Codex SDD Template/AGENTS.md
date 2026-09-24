@@ -1,46 +1,61 @@
-# AGENTS.md — Rules for Codex
+# AGENTS.md — Rules for Codex (CS 4300/5300 Homework 2)
 
-This project uses **spec-driven development**. A student in CS 4300/5300 (UCCS) owns this code
+This project uses **spec-driven development**. A student in CS 4300/5300 at UCCS owns this code
 and must be able to explain every line of it. You are a pair programmer, not the author.
+
+## Project context: HW2 Movie Theater Booking
+- Assignment: https://tghastings.github.io/cs4300andcs5300/homework_2.pdf
+- The Django project is `movie_theater_booking` and lives in the student's `homework2/` folder.
+  The app is `bookings`.
+- Models required by the assignment:
+  - **Movie:** title, description, release date, duration
+  - **Seat:** seat number, booking status
+  - **Booking:** movie, seat, user, booking date
+- API: Django REST Framework serializers plus `MovieViewSet`, `SeatViewSet` and `BookingViewSet`,
+  routed to `/api/movies/`, `/api/seats/` and `/api/bookings/`.
+- UI: Django templates in `bookings/templates/bookings/`: `base.html` (Bootstrap CSS link),
+  `movie_list.html`, `seat_booking.html` and `booking_history.html`. The UI shows and changes the
+  same data as the API.
+- Tests: unit and integration tests (`python manage.py test`) plus BDD with **Behave**
+  (`features/`). The course requires **≥ 80% coverage**.
+- In DevEdu, run with `python manage.py runserver 0.0.0.0:3000`. The app is deployed on **Render**.
 
 ## Source of truth
 - Features are defined in `specs/<NNN-feature>/spec.md`. Build **only** what the spec says.
-- If something is ambiguous or missing, **ask** or add it under "Open Questions" in the spec.
-  Never invent requirements, fields, endpoints or UI.
-- `plan.md` says *how*. `tasks.md` says *in what order*. Keep all three in sync. If the code has
-  to differ from the plan, say so and update `plan.md` in the same change.
+- If something is ambiguous or missing, **ask** or add it under "Open Questions." Never invent
+  requirements, fields, endpoints or UI. Where the assignment and the spec disagree, point it out.
+- `plan.md` says *how* and `tasks.md` says *in what order*. Keep them in sync with the code.
 
 ## How to work
 1. **One task at a time.** Implement only the next unchecked task in `tasks.md`, then stop and
    report back. Don't start the next task until the student says so.
 2. **Test first (red → green → refactor).**
    - Write the test first and run it to show that it fails, and why.
-   - Write the least code that makes it pass, then run the full test suite.
+   - Write the least code that makes it pass, then run the full suite.
    - Refactor only while the tests stay green.
 3. **Small diffs.** Touch only the files the task needs. No drive-by reformatting or renaming.
-4. **Explain.** After each task, summarize in plain language what changed and why, and name
-   the one concept the student should understand from this step.
-5. Tick the box in `tasks.md` when the task's tests pass.
+4. **Explain.** After each task, summarize in plain language what changed and why, and name the
+   one Django/DRF concept the student should understand from this step.
+5. Tick the task's box in `tasks.md` when its tests pass.
 
 ## Acceptance criteria → tests
-- Each Given/When/Then criterion in `spec.md` must map to at least one test:
-  a Behave scenario in `features/` for user-visible behavior, and a Django/pytest test for
-  model, serializer, view and API logic.
-- Test edge cases and error paths, not just the happy path.
-- The course requires **≥ 80% coverage**. Check it with `coverage run manage.py test && coverage report`.
+- Each Given/When/Then criterion must map to at least one test: a Behave scenario for behavior
+  users see in the UI, and a Django `TestCase` / DRF `APITestCase` for models, serializers and endpoints.
+- Test error paths (400/401/403/404, invalid data, double-booking) and not just the happy path.
+- Check coverage with `coverage run --source=bookings manage.py test && coverage report`.
 
-## Project conventions (Django)
-- Follow Django conventions: apps, models, views, `urls.py`, templates in `<app>/templates/<app>/`.
-- For APIs, use Django REST Framework serializers and viewsets. Return correct status codes.
-- In DevEdu, run the dev server with `python manage.py runserver 0.0.0.0:3000`.
-- Add dependencies to `requirements.txt` in the same change.
-- Write docstrings and comments that explain *why*, not *what*.
+## Conventions
+- Follow Django conventions: app layout, `urls.py` (project routes include the app routes),
+  templates namespaced under `bookings/`, and migrations committed with model changes.
+- Return correct HTTP status codes from the API.
+- Add new dependencies to `requirements.txt` in the same change.
+- Write docstrings, and comments that explain *why*, not *what*.
 
 ## Never
-- Never put secrets, API keys or passwords in code, tests, fixtures or commits. Use environment variables.
+- Never put secrets (the Django `SECRET_KEY`, passwords, Render environment values) in code, tests or commits.
 - Never delete or weaken a test just to make it pass. If you think a test is wrong, say so and ask.
 - Never run `git push`, `git reset --hard` or force-push, or rewrite history. The student commits and pushes.
-- Never change files outside this project folder.
+- Never change files outside `homework2/`.
 
 ## When you finish a feature
 List each acceptance criterion from `spec.md` and mark it ✅ met (naming the test that proves
