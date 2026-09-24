@@ -20,6 +20,7 @@ and remove movies. (HW2 §1 and §3.3: "View movie listings", `MovieViewSet` "fo
 - Given the movies "Dune" and "Up" exist
 - When I open the movie list page
 - Then I see both titles, each with its description and a "Book Now" button
+- (The button is shown but disabled until feature 002 adds the seat booking page. 002 makes it a link.)
 
 **AC-2 (US-1): Empty state**
 - Given no movies exist
@@ -43,7 +44,7 @@ and remove movies. (HW2 §1 and §3.3: "View movie listings", `MovieViewSet` "fo
 - Then the response is 201 and the movie appears in `GET /api/movies/`
 
 **AC-6 (US-3): Reject invalid data**
-- Given movie data with a missing title, or a duration of 0 or less
+- Given movie data with a missing title, a missing release date, or a duration of 0 or less
 - When a client sends `POST /api/movies/`
 - Then the response is 400 with an error for that field, and nothing is saved
 
@@ -52,20 +53,25 @@ and remove movies. (HW2 §1 and §3.3: "View movie listings", `MovieViewSet` "fo
 - When a client sends `PUT`/`PATCH /api/movies/<id>/`, then `DELETE /api/movies/<id>/`
 - Then the update returns 200 with the new values, the delete returns 204, and the movie is gone
 
-**AC-8 (US-3): Missing movie**
-- Given no movie with id 9999 exists
-- When a client sends `GET /api/movies/9999/`
-- Then the response is 404
+**AC-8 (US-3): Get one movie, or a missing one**
+- Given "Dune" exists and no movie with id 9999 exists
+- When a client sends `GET /api/movies/<Dune's id>/`, then `GET /api/movies/9999/`
+- Then the first response is 200 with Dune's fields, and the second is 404
 
 **AC-9 (UI): Consistent, responsive layout**
-- Given any page in the app
+- Given the movie list page
 - When it renders
-- Then it extends `base.html` (Bootstrap), with a navbar linking to Movies and My Bookings
+- Then it extends `base.html` (Bootstrap), with a navbar linking to Movies
+- (002 and 003 each add the same criterion, with its own test, for their page. 003 adds the
+  My Bookings link to the navbar once that page exists.)
 
 ## 4. Data
 | Thing | Information | Rules |
 |---|---|---|
-| Movie | title, description, release date, duration | title required (max 200 characters); duration in minutes, > 0; release date is a date |
+| Movie | title | **Required**; at most 200 characters |
+| Movie | description | Optional (may be blank) |
+| Movie | release date | **Required**; a valid date |
+| Movie | duration | **Required**; whole minutes, greater than 0 |
 
 ## 5. API / UI behavior
 | Action | Input | Success result | Failure result |
@@ -84,3 +90,7 @@ and remove movies. (HW2 §1 and §3.3: "View movie listings", `MovieViewSet` "fo
 ## 7. Open questions
 - [x] Duration in minutes or as `HH:MM`? → **Integer minutes.** Simpler to validate and test.
 - [x] Order of the list? → **By release date, newest first.**
+- [ ] TODO (decide): this example makes description optional and the other three fields required.
+      Do you agree? Could a movie be announced before it has a release date? A good answer says,
+      for each field, whether it's required, what the API returns when it's missing or invalid,
+      and which AC and test prove it. If you change a rule, update §4, AC-6, the plan and the tasks.

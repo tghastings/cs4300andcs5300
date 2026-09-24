@@ -1,4 +1,4 @@
-# Tasks: <Feature name>
+# Tasks: Seat booking
 
 **Plan:** [plan.md](plan.md)
 
@@ -11,7 +11,7 @@
 
 ## Done when
 - [ ] Every acceptance criterion in `spec.md` has a passing test
-- [ ] Full suite green: `python manage.py test` / `pytest`
-- [ ] `behave` passes
+- [ ] Full suite green: `python manage.py test`
+- [ ] `python manage.py behave` passes
 - [ ] Coverage ≥ 80%
 - [ ] `AI-USAGE.md` updated

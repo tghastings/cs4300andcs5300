@@ -16,8 +16,9 @@ and must be able to explain every line of it. You are a pair programmer, not the
 - UI: Django templates in `bookings/templates/bookings/`: `base.html` (Bootstrap CSS link),
   `movie_list.html`, `seat_booking.html` and `booking_history.html`. The UI shows and changes the
   same data as the API.
-- Tests: unit and integration tests (`python manage.py test`) plus BDD with **Behave**
-  (`features/`). The course requires **≥ 80% coverage**.
+- Tests: unit and integration tests (`python manage.py test`) plus BDD with **Behave** through
+  **behave-django** (`features/`, run with `python manage.py behave`; `behave_django` is in
+  `INSTALLED_APPS`). The course requires **≥ 80% coverage**.
 - In DevEdu, run with `python manage.py runserver 0.0.0.0:3000`. The app is deployed on **Render**.
 
 ## Source of truth
@@ -48,11 +49,15 @@ and must be able to explain every line of it. You are a pair programmer, not the
 - Follow Django conventions: app layout, `urls.py` (project routes include the app routes),
   templates namespaced under `bookings/`, and migrations committed with model changes.
 - Return correct HTTP status codes from the API.
+- Booking a seat happens through **one** shared booking operation. The seat booking page,
+  `/api/seats/` and `/api/bookings/` all call it. Never copy the booking rules into a second place.
 - Add new dependencies to `requirements.txt` in the same change.
 - Write docstrings, and comments that explain *why*, not *what*.
 
 ## Never
 - Never put secrets (the Django `SECRET_KEY`, passwords, Render environment values) in code, tests or commits.
+- Never take a booking's user from request data. It is always the signed-in user (`request.user`),
+  and booking lists only ever show that user's bookings.
 - Never delete or weaken a test just to make it pass. If you think a test is wrong, say so and ask.
 - Never run `git push`, `git reset --hard` or force-push, or rewrite history. The student commits and pushes.
 - Never change files outside `homework2/`.

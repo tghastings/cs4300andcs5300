@@ -13,7 +13,9 @@ Don't commit, and don't start the next task.
 ```
 
 **Then you:**
-1. Read the diff: `git diff`
+1. Read the diff: `git diff`, plus `git status` for any **new** files (tests, migrations, templates)
 2. Run the tests yourself
-3. Commit: `git commit -am "T#: <what it does>"`
+3. Stage only the files you reviewed, then commit:
+   `git add <reviewed files>` and then `git commit -m "T#: <what it does>"`
+   (Don't use `git commit -am`. It skips new files, so a new migration or template gets left out.)
 4. Add a line to `AI-USAGE.md`

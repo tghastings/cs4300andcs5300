@@ -45,7 +45,10 @@ Deployment (Render) and documentation aren't features. They're on the checklist 
 2. Copy everything in this folder into **`homework2/movie_theater_booking/`**, next to
    `manage.py`. Codex reads `AGENTS.md` from the folder you start it in.
 3. Install the test tools:
-   `pip install coverage behave && pip freeze > requirements.txt`
+   `pip install coverage behave-django && pip freeze > requirements.txt`
+   Plain `behave` doesn't know about Django. **behave-django** (the tool HW2 links to) runs your
+   scenarios against a Django test database. Add `behave_django` to `INSTALLED_APPS` and run
+   Behave with `python manage.py behave`.
 4. Commit before you write any code:
    `git add . && git commit -m "HW2: add SDD template"`
 5. Start Codex **from that folder**, then check that it read the rules by asking:
@@ -77,7 +80,7 @@ Paste `prompts/03-tasks.md`. Each task is one test→code→pass cycle and one c
 ### 4. Implement: one task at a time, test first
 Paste `prompts/04-implement.md` **for each task**. Codex writes the failing test (🔴), the least
 code that passes (🟢), cleans up (🔵), ticks the box, and **stops**. Then you read `git diff`, run
-the tests, and commit with a meaningful message. HW2 asks for frequent pushes with good commit
+the tests, `git add` the files you reviewed, and commit with a meaningful message. HW2 asks for frequent pushes with good commit
 messages, and one task per commit gives you exactly that.
 
 ### 5. Review: your name is on it
@@ -85,7 +88,7 @@ Paste `prompts/05-review.md`. Then run the checks yourself:
 ```bash
 python manage.py test
 coverage run --source=bookings manage.py test && coverage report   # HW2 needs ≥ 80%
-behave
+python manage.py behave
 python manage.py runserver 0.0.0.0:3000                            # then click "app" in DevEdu
 ```
 
@@ -105,7 +108,7 @@ python manage.py runserver 0.0.0.0:3000                            # then click 
 ## Before you submit
 
 - [ ] Every acceptance criterion in 001–003 has a passing test
-- [ ] `python manage.py test` and `behave` both pass
+- [ ] `python manage.py test` and `python manage.py behave` both pass
 - [ ] Coverage ≥ 80%
 - [ ] App runs in DevEdu on port 3000
 - [ ] Deployed on Render and the URL works
@@ -132,4 +135,4 @@ python manage.py runserver 0.0.0.0:3000                            # then click 
 | Codex invents requirements | "That's not in spec.md. Remove it or add it to Open Questions." |
 | Huge diffs | "Undo that. Implement only the next unchecked task." Or run `git restore .` |
 | App won't load in DevEdu | Use port 3000: `python manage.py runserver 0.0.0.0:3000` |
-| Behave can't find Django | Ask Codex to explain the `features/environment.py` setup and walk you through it. Don't just paste it in. |
+| Behave can't find Django | Run `python manage.py behave`, not plain `behave`, and check that `behave_django` is in `INSTALLED_APPS`. behave-django handles the setup, so you don't need a hand-written `features/environment.py`. |

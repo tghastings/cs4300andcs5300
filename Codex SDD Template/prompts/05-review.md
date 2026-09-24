@@ -15,5 +15,5 @@ Then list:
 - Anything a code reviewer would flag (naming, duplication, missing docstrings, security)
 ```
 
-**Then you:** fix the gaps (each fix is a new task), run `coverage report` and `behave`, and
+**Then you:** fix the gaps (each fix is a new task), run `coverage report` and `python manage.py behave`, and
 work through the "Before you submit" checklist in README.md.
