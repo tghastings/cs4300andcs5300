@@ -64,5 +64,5 @@ Moviegoers need to see what they've booked. (HW2 §1 "Check their booking histor
 ## 7. Open questions
 - [ ] AC-2 and AC-3 say users only see their own bookings. Why is this a **security** requirement,
       not just a feature choice? Could an admin or staff user ever see everyone's? If so, write that
-      as its own AC.
+      as its own AC. 📖 **Book:** [§11.2.1 A01: Broken Access Control](https://www.swebook.org/chapters/11-software-security/index.html#1121-a01-broken-access-control)
 - [ ] TODO

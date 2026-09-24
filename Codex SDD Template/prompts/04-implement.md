@@ -1,5 +1,7 @@
 # Prompt 4 — Implement ONE task (repeat per task)
 
+> 📖 **Book:** [§2.3.2 TDD](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development), [§10.2 levels of testing](https://www.swebook.org/chapters/10-testing/index.html#102-levels-of-testing), and [§8.6 commit habits](https://www.swebook.org/chapters/08-version-control-git/index.html#86-habits-that-make-git-work-for-a-team).
+
 ```
 Read AGENTS.md. Implement ONLY the next unchecked task in specs/<NNN-feature>/tasks.md.
 

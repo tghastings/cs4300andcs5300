@@ -44,11 +44,13 @@ A moviegoer who has picked a movie needs to see which seats are free and reserve
   making the second request gets the same answer as AC-3 (never a 500 error)
 - (Checking "is it taken?" before saving isn't enough: two requests can both pass the check before
   either one saves. The database itself has to refuse the duplicate.)
+- 📖 **Book:** the data store owns integrity constraints and concurrency control, [§7.2.1 The Shared-Data Pattern](https://www.swebook.org/chapters/07-architectural-patterns/index.html#721-the-shared-data-pattern).
 
 **AC-5 (US-2, US-3): The booking belongs to whoever is signed in**
 - Given I am signed in as Sam
 - When I book a seat through the page or the API, even if the request data names another user
 - Then the booking's user is Sam
+- 📖 **Book:** [§11.2.1 A01: Broken Access Control](https://www.swebook.org/chapters/11-software-security/index.html#1121-a01-broken-access-control)
 
 **AC-6 (US-2, US-3): Same rules everywhere**
 - Given seat A1 has been booked for Dune through the seat booking page

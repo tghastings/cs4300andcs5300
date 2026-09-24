@@ -48,6 +48,7 @@
   needed for a friendly error, but on its own it's race-prone: two requests can both pass it before
   either one saves. The database unique constraint is what actually guarantees AC-4. Save inside
   `transaction.atomic()` and turn the `IntegrityError` into the same response as AC-3, not a 500.
+  📖 **Book:** [§7.2.1 The Shared-Data Pattern](https://www.swebook.org/chapters/07-architectural-patterns/index.html#721-the-shared-data-pattern)
 - **Never trust the client for `user`.** It is set from `request.user` (AC-5). A `user` value in
   the request data is ignored or rejected. TODO: which, and what does the client see?
 - TODO: how do you keep Seat's booking status and Booking consistent? (See spec, Open questions.)

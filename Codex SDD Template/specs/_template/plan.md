@@ -4,6 +4,8 @@
 
 > This says **how** the spec will be built. Codex drafts it (prompts/02-plan.md) and you approve it. Don't approve
 > anything you can't explain.
+>
+> 📖 **Book:** [§13.5 Spec-Driven Development](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#135-spec-driven-development) (the Plan phase); Django MTV: [§7.3](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller); APIs: [§7.5.4](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis).
 
 ## 1. Approach
 <!-- A short paragraph: the overall design and why it was chosen over the alternatives. -->
@@ -24,6 +26,8 @@
 |  |  |
 
 ## 5. Test strategy
+> 📖 **Book:** [§10.2 Levels of Testing](https://www.swebook.org/chapters/10-testing/index.html#102-levels-of-testing); every row traces an AC to a test ([§3.4.4](https://www.swebook.org/chapters/03-user-requirements/index.html#344-tracing-requirements-to-tests-and-backlog-items)).
+
 | Spec ref | Test type (unit / integration / Behave) | Test name / scenario |
 |---|---|---|
 | AC-1 |  |  |

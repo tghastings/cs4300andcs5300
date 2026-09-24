@@ -4,6 +4,8 @@
 
 > Each task is one red → green → refactor cycle and one commit. Do them in order.
 > Codex ticks the box when the task's tests pass. **You** commit.
+>
+> 📖 **Book:** red → green → refactor is TDD, [§2.3.2](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development).
 
 - [ ] **T1** — <what> · test: `<test name>` · covers: AC-?
 - [ ] **T2** — …

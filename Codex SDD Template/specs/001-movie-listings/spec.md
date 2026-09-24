@@ -8,6 +8,8 @@ Moviegoers need to see what's showing before they can book a seat. Staff need to
 and remove movies. (HW2 §1 and §3.3: "View movie listings", `MovieViewSet` "for CRUD operations".)
 
 ## 2. User stories
+> 📖 **Book:** [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) (INVEST)
+
 - **US-1:** As a moviegoer, I want to see a list of movies, so that I can pick one to watch.
 - **US-2:** As a moviegoer, I want to see a movie's details (description, release date,
   duration), so that I can decide whether to watch it.
@@ -15,6 +17,7 @@ and remove movies. (HW2 §1 and §3.3: "View movie listings", `MovieViewSet` "fo
   listings can be managed.
 
 ## 3. Acceptance criteria
+> 📖 **Book:** [§3.4.1 Given / When / Then](https://www.swebook.org/chapters/03-user-requirements/index.html#given--when--then-writing-acceptance-criteria-as-scenarios). AC-6 tests the boundary (duration 0): [§10.4.2 boundary values](https://www.swebook.org/chapters/10-testing/index.html#1042-boundary-value-coverage).
 
 **AC-1 (US-1): List movies in the UI**
 - Given the movies "Dune" and "Up" exist

@@ -35,6 +35,8 @@ Deployment (Render) and documentation aren't features. They're on the checklist 
 | `prompts/` | Prompts to paste into Codex, one for each step. |
 | `AI-USAGE.md` | A log of how you used AI. HW2 requires you to cite AI use in your README. |
 
+📖 Each step links to the course textbook; see [Connecting to the book](#connecting-to-the-book).
+
 ---
 
 ## Setup
@@ -91,6 +93,32 @@ coverage run --source=bookings manage.py test && coverage report   # HW2 needs �
 python manage.py behave
 python manage.py runserver 0.0.0.0:3000                            # then click "app" in DevEdu
 ```
+
+---
+
+## Connecting to the book
+
+Every step above is a practice from the course textbook, [SWEBook](https://www.swebook.org).
+The whole workflow is §13.5; the rows below point to where each piece is taught.
+
+| In this template | 📖 SWEBook | How it connects |
+|---|---|---|
+| The workflow, `AGENTS.md` | [§13.5 Spec-Driven Development](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#135-spec-driven-development), [§13.6 Context as Infrastructure](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#136-context-as-infrastructure-claudemd-agentsmd-and-skills) | Specify → Plan → Tasks → Implement with a human checkpoint between each; `AGENTS.md` is the instructions file the agent loads every session. |
+| User stories (US-#) | [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) | INVEST: small, independent, testable stories. |
+| Given/When/Then criteria (AC-#) | [§3.4.1 Given / When / Then](https://www.swebook.org/chapters/03-user-requirements/index.html#given--when--then-writing-acceptance-criteria-as-scenarios) | Criteria written as scenarios, which Behave then runs. |
+| Open questions, spec review | [§3.1.2 Requirements Challenges](https://www.swebook.org/chapters/03-user-requirements/index.html#312-requirements-challenges) | Ambiguous language is what prompt 1 hunts for. |
+| Out of scope | [§4.4.1 MoSCoW Prioritization](https://www.swebook.org/chapters/04-requirements-analysis/index.html#441-must-should-could-wont-moscow-prioritization) | "Won't have (this time)" written down stops scope creep. |
+| AC → test (`Spec ref`, `covers:`) | [§3.4.4 Tracing Requirements to Tests](https://www.swebook.org/chapters/03-user-requirements/index.html#344-tracing-requirements-to-tests-and-backlog-items) | Every requirement traces forward to a test, and every test back to a requirement. |
+| Plan: models, views, templates, API | [§7.3 Model-View-Controller](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller), [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis) | Django's MTV is MVC under other names; DRF viewsets are resources + HTTP verbs. |
+| Tasks, red → green → refactor | [§2.3.2 Testing: Make It Central to Development](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development) | TDD: failing test, least code to pass, clean up. |
+| Unit, API and Behave tests | [§10.2 Levels of Testing](https://www.swebook.org/chapters/10-testing/index.html#102-levels-of-testing) | Unit and integration tests, plus BDD acceptance tests (§10.2.3). |
+| Error cases, edge cases | [§10.4 Black-Box Testing](https://www.swebook.org/chapters/10-testing/index.html#104-input-coverage-i-black-box-testing) | Equivalence classes and boundary values (e.g., duration 0). |
+| Coverage ≥ 80% | [§10.3 Code Coverage I](https://www.swebook.org/chapters/10-testing/index.html#103-code-coverage-i-white-box-testing) | What statement and branch coverage do (and don't) tell you. |
+| No double booking (002) | [§7.2.1 The Shared-Data Pattern](https://www.swebook.org/chapters/07-architectural-patterns/index.html#721-the-shared-data-pattern) | The data store owns consistency, concurrency control and integrity constraints. |
+| Only your own bookings (002/003) | [§11.2.1 A01: Broken Access Control](https://www.swebook.org/chapters/11-software-security/index.html#1121-a01-broken-access-control) | Users can act only within their own permissions. |
+| One task = one commit, no secrets | [§8.6 Habits That Make Git Work for a Team](https://www.swebook.org/chapters/08-version-control-git/index.html#86-habits-that-make-git-work-for-a-team) | Small focused commits, messages for the next reader, never commit secrets. |
+| Review | [§9.3 Code Reviews](https://www.swebook.org/chapters/09-static-checking/index.html#93-code-reviews-check-intent-and-trust), [§13.7.2 The Generator and the Evaluator](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#1372-the-generator-and-the-evaluator) | Treat generated code as unverified until a check shows it works. |
+| `AI-USAGE.md`, README | [§13.2.10 The Team Project](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#13210-the-team-project-appendix-a), [§8.7.3 The README](https://www.swebook.org/chapters/08-version-control-git/index.html#873-the-readme-your-projects-front-door) | Record where you used AI and how you verified it. |
 
 ---
 

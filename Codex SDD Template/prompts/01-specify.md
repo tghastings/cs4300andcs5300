@@ -1,5 +1,7 @@
 # Prompt 1 — Review my spec
 
+> 📖 **Book:** what a reviewer checks for: [§3.4.1 user stories and Given/When/Then](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories), [§3.1.2 requirements challenges](https://www.swebook.org/chapters/03-user-requirements/index.html#312-requirements-challenges) (ambiguity).
+
 Paste into Codex, replacing `<NNN-feature>`:
 
 ```

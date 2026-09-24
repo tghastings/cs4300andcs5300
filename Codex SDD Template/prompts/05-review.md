@@ -1,5 +1,7 @@
 # Prompt 5 — Review the feature against the spec
 
+> 📖 **Book:** [§9.3 code reviews](https://www.swebook.org/chapters/09-static-checking/index.html#93-code-reviews-check-intent-and-trust), [§13.7.2 the generator and the evaluator](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#1372-the-generator-and-the-evaluator), [§10.3 code coverage](https://www.swebook.org/chapters/10-testing/index.html#103-code-coverage-i-white-box-testing).
+
 ```
 Read specs/<NNN-feature>/spec.md. Don't change any code.
 

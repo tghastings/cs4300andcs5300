@@ -10,11 +10,15 @@
 <!-- One or two sentences: who has what problem? -->
 
 ## 2. User stories
+> 📖 **Book:** [§3.4.1 Guidelines for Effective User Stories](https://www.swebook.org/chapters/03-user-requirements/index.html#341-guidelines-for-effective-user-stories) (INVEST)
+
 <!-- As a <role>, I want <capability>, so that <benefit>. Keep them small and independent. -->
 - **US-1:** As a …, I want …, so that …
 - **US-2:** …
 
 ## 3. Acceptance criteria
+> 📖 **Book:** [§3.4.1 Given / When / Then](https://www.swebook.org/chapters/03-user-requirements/index.html#given--when--then-writing-acceptance-criteria-as-scenarios); error and edge cases: [§10.4 black-box testing](https://www.swebook.org/chapters/10-testing/index.html#104-input-coverage-i-black-box-testing)
+
 <!-- Given/When/Then. These become your Behave scenarios and tests. Include error cases. -->
 
 **AC-1 (US-1): <short name>**
@@ -40,6 +44,8 @@
 |  |  |  |  |
 
 ## 6. Out of scope
+> 📖 **Book:** the "Won't have" of [§4.4.1 MoSCoW](https://www.swebook.org/chapters/04-requirements-analysis/index.html#441-must-should-could-wont-moscow-prioritization)
+
 <!-- What this feature deliberately does NOT do. This stops scope creep (including from the AI). -->
 -
 
