@@ -5,7 +5,7 @@
 
 ## 1. Problem
 Moviegoers need to see what's showing before they can book a seat. Staff need to add, update
-and remove movies. (Homework 2 (HW2) §1 and §3.3: "View movie listings", and `MovieViewSet` "for CRUD operations",
+and remove movies. (Homework 2, or HW2, §1 and §3.3: "View movie listings", and `MovieViewSet` "for CRUD operations",
 where CRUD means create, read, update, delete.)
 
 ## 2. User stories
