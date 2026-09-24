@@ -66,6 +66,10 @@ Deployment (Render) and documentation aren't features. They're on the checklist 
   when someone books a seat that's already taken. Write acceptance criteria as
   **Given/When/Then**, because they become your Behave scenarios.
 
+> **AC = acceptance criterion:** one specific, testable condition the feature must meet to count as
+> done, numbered AC-1, AC-2, and so on. **US** = user story. Every AC traces to a user story, and every
+> AC gets at least one test, so "is this feature done?" has a yes/no answer.
+
 Then paste `prompts/01-specify.md`. **Codex reviews your spec; it doesn't write it.**
 
 > A spec is done when a classmate could read it and write the tests without asking you anything.

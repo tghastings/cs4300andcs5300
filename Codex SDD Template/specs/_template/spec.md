@@ -19,7 +19,9 @@
 ## 3. Acceptance criteria
 > 📖 **Book:** [§3.4.1 Given / When / Then](https://www.swebook.org/chapters/03-user-requirements/index.html#given--when--then-writing-acceptance-criteria-as-scenarios); error and edge cases: [§10.4 black-box testing](https://www.swebook.org/chapters/10-testing/index.html#104-input-coverage-i-black-box-testing)
 
-<!-- Given/When/Then. These become your Behave scenarios and tests. Include error cases. -->
+<!-- AC = acceptance criterion: one testable condition the feature must meet to count as done.
+     Number them AC-1, AC-2, ... and tag the user story each one serves (US-#).
+     Given/When/Then. These become your Behave scenarios and tests. Include error cases. -->
 
 **AC-1 (US-1): <short name>**
 - Given …
