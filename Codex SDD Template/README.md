@@ -77,7 +77,7 @@ Codex why or change it. Then commit.
 - 001's plan is already filled in so you can see the level of detail to aim for.
 
 ### 3. Tasks: small steps (you + Codex)
-Paste `prompts/03-tasks.md`. Each task is one test→code→pass cycle and one commit.
+Paste `prompts/03-tasks.md`. Each task is one small test-first increment and one commit.
 
 ### 4. Implement: one task at a time, test first
 Paste `prompts/04-implement.md` **for each task**. Codex writes the failing test (🔴), the least
@@ -109,15 +109,15 @@ The whole workflow is §13.5; the rows below point to where each piece is taught
 | Open questions, spec review | [§3.1.2 Requirements Challenges](https://www.swebook.org/chapters/03-user-requirements/index.html#312-requirements-challenges) | Ambiguous language is what prompt 1 hunts for. |
 | Out of scope | [§4.4.1 MoSCoW Prioritization](https://www.swebook.org/chapters/04-requirements-analysis/index.html#441-must-should-could-wont-moscow-prioritization) | "Won't have (this time)" written down stops scope creep. |
 | AC → test (`Spec ref`, `covers:`) | [§3.4.4 Tracing Requirements to Tests](https://www.swebook.org/chapters/03-user-requirements/index.html#344-tracing-requirements-to-tests-and-backlog-items) | Every requirement traces forward to a test, and every test back to a requirement. |
-| Plan: models, views, templates, API | [§7.3 Model-View-Controller](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller), [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis) | Django's MTV is MVC under other names; DRF viewsets are resources + HTTP verbs. |
-| Tasks, red → green → refactor | [§2.3.2 Testing: Make It Central to Development](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development) | TDD: failing test, least code to pass, clean up. |
+| Plan: models, views, templates, API | [§7.3 Model-View-Controller](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller), [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis) | Django's MTV applies closely related separation-of-concerns ideas, with different names and role boundaries; DRF viewsets are resources + HTTP verbs. |
+| Tasks, red → green → refactor | [§2.3.2 Testing: Make It Central to Development](https://www.swebook.org/chapters/02-software-development-processes/index.html#232-testing-make-it-central-to-development) | TDD: failing test, least code to pass, clean up. A test that passes immediately is a verification test, not a red → green cycle. |
 | Unit, API and Behave tests | [§10.2 Levels of Testing](https://www.swebook.org/chapters/10-testing/index.html#102-levels-of-testing) | Unit and integration tests, plus BDD acceptance tests (§10.2.3). |
 | Error cases, edge cases | [§10.4 Black-Box Testing](https://www.swebook.org/chapters/10-testing/index.html#104-input-coverage-i-black-box-testing) | Equivalence classes and boundary values (e.g., duration 0). |
-| Coverage ≥ 80% | [§10.3 Code Coverage I](https://www.swebook.org/chapters/10-testing/index.html#103-code-coverage-i-white-box-testing) | What statement and branch coverage do (and don't) tell you. |
+| Coverage ≥ 80% | [§10.3 Code Coverage I](https://www.swebook.org/chapters/10-testing/index.html#103-code-coverage-i-white-box-testing), [§10.1.3 Test Adequacy](https://www.swebook.org/chapters/10-testing/index.html#1013-test-adequacy-deciding-when-to-stop) | What statement and branch coverage do (and don't) tell you. 80% is a floor, not the goal. |
 | No double booking (002) | [§7.2.1 The Shared-Data Pattern](https://www.swebook.org/chapters/07-architectural-patterns/index.html#721-the-shared-data-pattern) | The data store owns consistency, concurrency control and integrity constraints. |
 | Only your own bookings (002/003) | [§11.2.1 A01: Broken Access Control](https://www.swebook.org/chapters/11-software-security/index.html#1121-a01-broken-access-control) | Users can act only within their own permissions. |
 | One task = one commit, no secrets | [§8.6 Habits That Make Git Work for a Team](https://www.swebook.org/chapters/08-version-control-git/index.html#86-habits-that-make-git-work-for-a-team) | Small focused commits, messages for the next reader, never commit secrets. |
-| Review | [§9.3 Code Reviews](https://www.swebook.org/chapters/09-static-checking/index.html#93-code-reviews-check-intent-and-trust), [§13.7.2 The Generator and the Evaluator](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#1372-the-generator-and-the-evaluator) | Treat generated code as unverified until a check shows it works. |
+| Review | [§9.3 Code Reviews](https://www.swebook.org/chapters/09-static-checking/index.html#93-code-reviews-check-intent-and-trust), [§13.7.2 The Generator and the Evaluator](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#1372-the-generator-and-the-evaluator) | The evaluator isn't the generator: run Prompt 5 in a fresh Codex session, and treat generated code as unverified until a check shows it works. |
 | `AI-USAGE.md`, README | [§13.2.10 The Team Project](https://www.swebook.org/chapters/13-ai-across-the-lifecycle/index.html#13210-the-team-project-appendix-a), [§8.7.3 The README](https://www.swebook.org/chapters/08-version-control-git/index.html#873-the-readme-your-projects-front-door) | Record where you used AI and how you verified it. |
 
 ---

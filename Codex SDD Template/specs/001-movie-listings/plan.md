@@ -10,7 +10,7 @@ page and the API always show the same data.
 **Rejected:** writing separate `APIView`s for list, create and detail. It's more code, and the
 assignment specifically asks for viewsets.
 
-> 📖 **Book:** Django's MTV is [§7.3 Model-View-Controller](https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller); a viewset exposes a resource through HTTP verbs, [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis).
+> 📖 **Book:** Django's MTV applies ideas closely related to [§7.3 Model-View-Controller], with different names and role boundaries(https://www.swebook.org/chapters/07-architectural-patterns/index.html#73-user-interfaces-model-view-controller); a viewset exposes a resource through HTTP verbs, [§7.5.4 RESTful APIs](https://www.swebook.org/chapters/07-architectural-patterns/index.html#754-restful-apis).
 
 ## 2. Data model
 | Model | Field | Type | Constraints | Spec ref |

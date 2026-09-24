@@ -31,7 +31,8 @@ and must be able to explain every line of it. You are a pair programmer, not the
 1. **One task at a time.** Implement only the next unchecked task in `tasks.md`, then stop and
    report back. Don't start the next task until the student says so.
 2. **Test first (red → green → refactor).**
-   - Write the test first and run it to show that it fails, and why.
+   - Write the test first and run it to show that it fails, and why. If it already passes,
+     say so and why (it's a verification test); don't invent code just to see red.
    - Write the least code that makes it pass, then run the full suite.
    - Refactor only while the tests stay green.
 3. **Small diffs.** Touch only the files the task needs. No drive-by reformatting or renaming.

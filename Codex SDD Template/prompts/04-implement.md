@@ -5,7 +5,8 @@
 ```
 Read AGENTS.md. Implement ONLY the next unchecked task in specs/<NNN-feature>/tasks.md.
 
-1. Write the test first. Run it and show me that it fails, and why.
+1. Write the test first. Run it and show me that it fails, and why. If it already passes, say so
+   and explain why. Don't write code just to see red; it's a verification test.
 2. Write the least code that makes it pass. Run the FULL test suite.
 3. Refactor if it helps, keeping the tests green.
 4. Tick the task in tasks.md.
