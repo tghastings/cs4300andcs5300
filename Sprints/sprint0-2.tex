@@ -68,7 +68,16 @@ Produce low-fidelity mockups covering your high-level stories. Show the major sc
 These should be sketches or wireframes. Polished high-fidelity mockups are not what is being asked for, and they cost you time you do not have.
 
 \subsection{Storyboard Clarity (10 pts)}
-For each high-level story, write a brief storyboard explaining how the user enters the workflow, what actions they take, what the system returns, and what successful completion looks like.
+For each high-level story, draw a storyboard: a short sequence of lo-fi sketches, one frame per step, showing what the user sees and does at each moment (see SWEBook \S3.5.3, \href{https://www.swebook.org/chapters/03-user-requirements/index.html#353-storyboards-drawing-the-scenario}{Storyboards: Drawing the Scenario}). A written description alone does not count as a storyboard.
+
+\begin{itemize}
+    \item \textbf{Pictures in sequence.} Four to eight frames per storyboard, ordered left to right or numbered. Together the frames show how the user enters the workflow, what actions they take, what the system shows in response, and what successful completion looks like.
+    \item \textbf{Lo-fi on purpose.} Boxes, arrows, stick figures, and hand lettering, drawn in minutes on paper, a whiteboard, or a simple drawing tool. Photos of hand sketches are fine. Polished visual design is not what is being asked for.
+    \item \textbf{Short captions.} Give each frame a one-line caption naming the step. The picture carries the story; the caption labels it.
+    \item \textbf{Include at least one exception.} Across your storyboards, draw at least one failure or difficult path (for example, an empty search result or invalid input) alongside the ideal path.
+\end{itemize}
+
+Your storyboards should use the same screens as your lo-fi UI, so the two sections tell one story.
 
 \subsection{Gherkin Acceptance Criteria (10 pts)}
 Write acceptance criteria as Gherkin scenarios---\textbf{Given}, \textbf{When}, \textbf{Then}---on your decomposed stories in GitHub Projects. These scenarios become the tests you write in Sprint 1, so write them as statements about observable behavior. You will be demonstrating these scenarios in class throughout the semester.
