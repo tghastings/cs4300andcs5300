@@ -4,6 +4,8 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{booktabs}
 
 % Header/Footer
 \pagestyle{fancy}
@@ -99,6 +101,85 @@ One team member must post to your Dev\_Cust Group on Slack with information abou
 You must document in your project README where and when you got help from AI: the tool you used, what it helped with, and how you used the result. You do not need to include transcripts or chat logs.
 
 \subsection*{Peer Evaluations}
-Complete your peer evaluations! The activity opens immediately after the sprint deadline and has multiple stages to complete.
+Complete your peer evaluations! The activity opens immediately after the sprint deadline and has multiple stages to complete. See Section~\ref{sec:grading} for how they count.
+
+\newpage
+\section{How Your Sprint Is Graded}\label{sec:grading}
+
+Your team succeeds or struggles together, but your own engineering work is graded on its own. Every sprint you get a \textbf{team score}, an \textbf{individual score}, and points for \textbf{peer feedback}.
+
+\subsection*{The formula}
+\begin{center}
+\fbox{\parbox{0.9\linewidth}{\centering
+\textbf{Sprint grade} $=$ Peer feedback (12) $+$ 88 $\times$ (\textbf{65\%} Team $+$ \textbf{35\%} Individual)}}
+\end{center}
+
+\begin{itemize}
+    \item \textbf{Peer feedback (12 pts):} you earn these by completing every stage of the Kritik peer evaluation. They are the same 12 points listed in each sprint's rubric.
+    \item \textbf{Team score:} the remaining items in that sprint's rubric (tests, coverage, CI, deployment, and so on). Everyone on the team gets the same team score.
+    \item \textbf{Individual score (out of 30):} how much real engineering \emph{you} contributed this sprint. See below.
+\end{itemize}
+
+\textbf{Example.} Your team earns 80 of its 88 team points (90.9\%), and you earn 24/30 individually (80\%). You complete Kritik (12/12).\\
+Sprint grade $= 12 + 88 \times (0.65 \times 0.909 + 0.35 \times 0.80) = 12 + 76.6 = \mathbf{88.6}$.
+
+\textbf{Minimum contribution.} If your individual score is below 15/30, a strong team score cannot carry you to a passing sprint grade. Dr.~Hastings reviews every case like this personally.
+
+\subsection*{Your individual score (30 points)}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{>{\raggedright\arraybackslash}p{4.2cm} c >{\raggedright\arraybackslash}p{9.3cm}}
+\toprule
+\textbf{Category} & \textbf{Pts} & \textbf{What earns the points} \\
+\midrule
+Engineering substance & 10 & Meaningful, non-trivial work you implemented. A feature that spans model, view/API, and UI scores high. A button, header, or styling change alone scores low. CI/CD, deployment, security, AI integration, and test infrastructure all count as real engineering. \\
+Delivered impact & 8 & Your work is merged to \texttt{main}, integrated, and working in production by the sprint tag. Unmerged work gets credit for effort, not delivery. \\
+Testing \& verification & 7 & You wrote tests for \emph{your own} feature: unit, integration, and BDD where it fits. Testing edge cases, errors, and permissions earns the top of the range. \\
+Collaboration \& review & 5 & Reviewing teammates' pull requests, helping debug, resolving merge conflicts, and helping integrate other people's work. \\
+\midrule
+\textbf{Total} & \textbf{30} & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{You need both code and tests for full credit.} Implementation alone, or testing alone, cannot earn 30/30.
+
+\textbf{We don't count activity.} Commits, lines of code, number of pull requests, and story points help us understand the work, but they are never turned into points. One substantial, well-tested feature beats fifty tiny commits.
+
+\subsection*{What we look at}
+A working feature is not enough by itself. We follow your work from start to finish:
+\begin{center}
+\textbf{Plan} $\rightarrow$ \textbf{Own} $\rightarrow$ \textbf{Build} $\rightarrow$ \textbf{Test} $\rightarrow$ \textbf{Review} $\rightarrow$ \textbf{Merge} $\rightarrow$ \textbf{Deploy}
+\end{center}
+That trail comes from GitHub: the cards assigned to you on your Project board, your pull requests, your code and tests, CI results, code reviews, and what made it to production. If you did the work but none of it shows up there, we can't give you full credit for it.
+
+\subsection*{Make your work visible}
+\begin{itemize}
+    \item \textbf{Assign yourself} to the cards you own on the Project board, and keep their status up to date.
+    \item \textbf{Link every pull request to its card or issue} (for example, write ``Closes \#12'' in the PR description).
+    \item \textbf{Put your tests in the same pull request} as the feature they test.
+    \item \textbf{Push to GitHub under your own name.} If you pair program, add a \texttt{Co-authored-by:} line to the commit so your partner gets credit too.
+    \item \textbf{Review your teammates' pull requests} and leave real comments.
+    \item \textbf{Work across the whole sprint,} not in one push the night before.
+\end{itemize}
+Don't try to game the grader. If you follow good engineering practice all sprint, the evidence for a strong score will already be there.
+
+\subsection*{Kritik peer evaluations}
+Kritik is used in two ways:
+\begin{enumerate}
+    \item \textbf{Completion earns the 12 peer-feedback points.} Whether your reviews are kind or critical doesn't change your score. Just be fair and specific.
+    \item \textbf{Your reviews give us context GitHub can't show}, such as pairing, debugging, helping a teammate get unstuck, or integration work. Answer this question: \emph{``Is there anything about this sprint that the GitHub history alone would give the wrong impression about?''}
+\end{enumerate}
+You are not grading your teammates. Positive context can raise someone's individual score when GitHub under-credits them. Negative feedback never lowers a score by itself; it only leads us to take a closer look at the GitHub evidence. What teammates write about you stays confidential.
+
+\subsection*{Confidence}
+Along with your individual score, your feedback includes an \textbf{evidence confidence} percentage. It tells you how clear the GitHub trail was. For example, it drops if your commits are hard to attribute or your cards aren't linked to your pull requests. It is \emph{not} a measure of how good your work was, and it does not change your grade. Low confidence means Dr.~Hastings looks at your work more closely.
+
+\subsection*{Life happens}
+If illness, a family emergency, or another serious circumstance affects your sprint, contact Dr.~Hastings as soon as you can. Depending on the situation, Dr.~Hastings may excuse your individual score (your grade becomes the team score), extend your deadline, or assign equivalent engineering work. Your team's expected scope is adjusted to match. Personal details are never written into your feedback.
+
+\subsection*{Your feedback}
+After each sprint, you will get a private written report explaining your individual score, what was strong, and what would raise it. It never compares you to your teammates. Your official grade is in Canvas.
 
 \end{document}
